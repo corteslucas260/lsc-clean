@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Limpeza de Estofados | Higienização Profissional</title>
+
+  <title>LSC Clean | Limpeza de Estofados</title>
+
+  <meta name="description" content="Limpeza e higienização profissional de sofás, colchões, cadeiras, poltronas e bancos automotivos. Atendimento em domicílio." />
 
   <style>
     * {
@@ -121,6 +124,17 @@
       transform: translateY(-3px);
     }
 
+    .location-box {
+      margin-top: 25px;
+      background: white;
+      color: #0f766e;
+      padding: 14px 18px;
+      border-radius: 14px;
+      font-weight: bold;
+      display: inline-block;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+
     .hero-card {
       background: white;
       border-radius: 25px;
@@ -129,11 +143,11 @@
     }
 
     .hero-image {
-      height: 420px;
+      height: 430px;
       border-radius: 20px;
       background:
-        linear-gradient(rgba(15,118,110,0.15), rgba(15,118,110,0.15)),
-        url("https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80");
+        linear-gradient(rgba(15,118,110,0.10), rgba(15,118,110,0.10)),
+        url("https://images.pexels.com/photos/4108715/pexels-photo-4108715.jpeg?auto=compress&cs=tinysrgb&w=1200");
       background-size: cover;
       background-position: center;
     }
@@ -166,8 +180,8 @@
 
     .service-card {
       background: white;
-      padding: 30px;
       border-radius: 18px;
+      overflow: hidden;
       text-align: center;
       box-shadow: 0 10px 30px rgba(0,0,0,0.08);
       transition: 0.3s;
@@ -177,14 +191,35 @@
       transform: translateY(-8px);
     }
 
-    .service-card .icon {
-      font-size: 42px;
-      margin-bottom: 15px;
+    .service-img {
+      height: 170px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .service-content {
+      padding: 24px;
     }
 
     .service-card h3 {
       margin-bottom: 10px;
       color: #0f766e;
+    }
+
+    .sofa-img {
+      background-image: url("https://images.pexels.com/photos/4846459/pexels-photo-4846459.jpeg?auto=compress&cs=tinysrgb&w=900");
+    }
+
+    .colchao-img {
+      background-image: url("https://images.pexels.com/photos/6585601/pexels-photo-6585601.jpeg?auto=compress&cs=tinysrgb&w=900");
+    }
+
+    .cadeira-img {
+      background-image: url("https://images.pexels.com/photos/4107120/pexels-photo-4107120.jpeg?auto=compress&cs=tinysrgb&w=900");
+    }
+
+    .carro-img {
+      background-image: url("https://images.pexels.com/photos/6872158/pexels-photo-6872158.jpeg?auto=compress&cs=tinysrgb&w=900");
     }
 
     .benefits {
@@ -229,18 +264,18 @@
     }
 
     .photo {
-      height: 300px;
+      height: 320px;
       background-size: cover;
       background-position: center;
     }
 
     .before {
-      background-image: url("https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=900&q=80");
-      filter: grayscale(30%);
+      background-image: url("https://images.pexels.com/photos/6195275/pexels-photo-6195275.jpeg?auto=compress&cs=tinysrgb&w=1000");
+      filter: saturate(0.75) contrast(0.95);
     }
 
     .after {
-      background-image: url("https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=900&q=80");
+      background-image: url("https://images.pexels.com/photos/4107284/pexels-photo-4107284.jpeg?auto=compress&cs=tinysrgb&w=1000");
     }
 
     .photo-box h3 {
@@ -307,7 +342,6 @@
       background: linear-gradient(135deg, #0f766e, #064e3b);
       color: white;
       text-align: center;
-      border-radius: 0;
     }
 
     .cta h2 {
@@ -363,10 +397,19 @@
       .hero {
         grid-template-columns: 1fr;
         text-align: center;
+        padding: 55px 5%;
       }
 
       .hero-text h1 {
         font-size: 36px;
+      }
+
+      .hero-text p {
+        font-size: 18px;
+      }
+
+      .hero-image {
+        height: 320px;
       }
 
       .services,
@@ -381,6 +424,14 @@
         flex-direction: column;
         gap: 12px;
       }
+
+      .section-title h2 {
+        font-size: 30px;
+      }
+
+      .cta h2 {
+        font-size: 30px;
+      }
     }
   </style>
 </head>
@@ -393,6 +444,7 @@
 
   <header>
     <div class="logo">LSC <span>Clean</span></div>
+
     <a class="header-btn" href="https://wa.me/5569992315490?text=Olá,%20quero%20fazer%20um%20orçamento%20de%20limpeza%20de%20estofados" target="_blank">
       Chamar no WhatsApp
     </a>
@@ -401,6 +453,7 @@
   <section class="hero">
     <div class="hero-text">
       <h1>Seu estofado limpo, cheiroso e livre de sujeiras profundas</h1>
+
       <p>
         Higienização profissional de sofás, colchões, cadeiras, poltronas e bancos automotivos com atendimento rápido e acabamento de qualidade.
       </p>
@@ -415,6 +468,10 @@
       <a class="main-btn" href="https://wa.me/5569992315490?text=Olá,%20vim%20pela%20landing%20page.%20Quero%20um%20orçamento%20para%20limpeza%20de%20estofados." target="_blank">
         Solicitar Orçamento Agora
       </a>
+
+      <div class="location-box">
+        📍 <span id="cidade-atendimento">Atendimento em domicílio em Porto Velho</span>
+      </div>
     </div>
 
     <div class="hero-card">
@@ -430,27 +487,35 @@
 
     <div class="services">
       <div class="service-card">
-        <div class="icon">🛋️</div>
-        <h3>Sofás</h3>
-        <p>Higienização completa para remover sujeira, manchas leves e odores.</p>
+        <div class="service-img sofa-img"></div>
+        <div class="service-content">
+          <h3>Sofás</h3>
+          <p>Higienização completa para remover sujeira, manchas leves e odores.</p>
+        </div>
       </div>
 
       <div class="service-card">
-        <div class="icon">🛏️</div>
-        <h3>Colchões</h3>
-        <p>Limpeza profunda para melhorar a higiene e o conforto do seu descanso.</p>
+        <div class="service-img colchao-img"></div>
+        <div class="service-content">
+          <h3>Colchões</h3>
+          <p>Limpeza profunda para melhorar a higiene e o conforto do seu descanso.</p>
+        </div>
       </div>
 
       <div class="service-card">
-        <div class="icon">🪑</div>
-        <h3>Cadeiras</h3>
-        <p>Ideal para cadeiras residenciais, comerciais, escritórios e áreas gourmet.</p>
+        <div class="service-img cadeira-img"></div>
+        <div class="service-content">
+          <h3>Cadeiras</h3>
+          <p>Ideal para cadeiras residenciais, comerciais, escritórios e áreas gourmet.</p>
+        </div>
       </div>
 
       <div class="service-card">
-        <div class="icon">🚗</div>
-        <h3>Bancos Automotivos</h3>
-        <p>Remoção de sujeira acumulada e odores nos bancos do seu veículo.</p>
+        <div class="service-img carro-img"></div>
+        <div class="service-content">
+          <h3>Bancos Automotivos</h3>
+          <p>Remoção de sujeira acumulada e odores nos bancos do seu veículo.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -566,13 +631,105 @@
 
   <footer>
     <p><strong>LSC Clean - Limpeza de Estofados</strong></p>
-    <p>Atendimento em domicílio | Porto Velho e região</p>
+    <p id="cidade-rodape">Atendimento em domicílio em Porto Velho</p>
     <p>WhatsApp: (69) 99231-5490</p>
   </footer>
 
   <a class="whatsapp-float" href="https://wa.me/5569992315490?text=Olá,%20quero%20um%20orçamento%20de%20limpeza%20de%20estofados." target="_blank">
     ☎
   </a>
+
+  <script>
+    const novaMutumParana = {
+      nome: "Nova Mutum Paraná",
+      endereco: "Atendimento em domicílio em Nova Mutum Paraná",
+      lat: -9.2380,
+      lon: -64.5454,
+      raioKm: 20
+    };
+
+    const jacyParana = {
+      nome: "Jacy-Paraná",
+      endereco: "Atendimento em domicílio em Jacy-Paraná",
+      lat: -9.2586,
+      lon: -64.3900,
+      raioKm: 20
+    };
+
+    function calcularDistancia(lat1, lon1, lat2, lon2) {
+      const R = 6371;
+      const dLat = (lat2 - lat1) * Math.PI / 180;
+      const dLon = (lon2 - lon1) * Math.PI / 180;
+
+      const a =
+        Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+        Math.cos(lat1 * Math.PI / 180) *
+        Math.cos(lat2 * Math.PI / 180) *
+        Math.sin(dLon / 2) *
+        Math.sin(dLon / 2);
+
+      const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+      return R * c;
+    }
+
+    function atualizarTextoAtendimento(texto) {
+      document.getElementById("cidade-atendimento").innerText = texto;
+      document.getElementById("cidade-rodape").innerText = texto;
+    }
+
+    function mostrarPortoVelho() {
+      atualizarTextoAtendimento("Atendimento em domicílio em Porto Velho");
+    }
+
+    function identificarCidadeAtendimento(latitude, longitude) {
+      const distanciaNovaMutum = calcularDistancia(
+        latitude,
+        longitude,
+        novaMutumParana.lat,
+        novaMutumParana.lon
+      );
+
+      const distanciaJacyParana = calcularDistancia(
+        latitude,
+        longitude,
+        jacyParana.lat,
+        jacyParana.lon
+      );
+
+      if (distanciaNovaMutum <= novaMutumParana.raioKm) {
+        atualizarTextoAtendimento(novaMutumParana.endereco);
+        return;
+      }
+
+      if (distanciaJacyParana <= jacyParana.raioKm) {
+        atualizarTextoAtendimento(jacyParana.endereco);
+        return;
+      }
+
+      mostrarPortoVelho();
+    }
+
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(
+        function(position) {
+          identificarCidadeAtendimento(
+            position.coords.latitude,
+            position.coords.longitude
+          );
+        },
+        function() {
+          mostrarPortoVelho();
+        },
+        {
+          enableHighAccuracy: true,
+          timeout: 8000,
+          maximumAge: 0
+        }
+      );
+    } else {
+      mostrarPortoVelho();
+    }
+  </script>
 
 </body>
 </html>
