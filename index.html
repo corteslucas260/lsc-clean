@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Limpeza de Estofados | Higienização Profissional</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #f5f7fa;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .top-bar {
+      background: #0f766e;
+      color: white;
+      padding: 10px 5%;
+      text-align: center;
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    header {
+      background: white;
+      padding: 18px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
+      color: #0f766e;
+    }
+
+    .logo span {
+      color: #111827;
+    }
+
+    .header-btn {
+      background: #22c55e;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .header-btn:hover {
+      background: #16a34a;
+      transform: scale(1.05);
+    }
+
+    .hero {
+      min-height: 90vh;
+      padding: 80px 5%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 40px;
+      background: linear-gradient(135deg, #ecfeff, #f0fdf4);
+    }
+
+    .hero-text h1 {
+      font-size: 48px;
+      line-height: 1.1;
+      color: #0f172a;
+      margin-bottom: 20px;
+    }
+
+    .hero-text h1 span {
+      color: #0f766e;
+    }
+
+    .hero-text p {
+      font-size: 20px;
+      color: #475569;
+      margin-bottom: 25px;
+    }
+
+    .hero-list {
+      margin-bottom: 30px;
+    }
+
+    .hero-list div {
+      margin-bottom: 10px;
+      font-size: 17px;
+    }
+
+    .main-btn {
+      display: inline-block;
+      background: #22c55e;
+      color: white;
+      padding: 16px 28px;
+      border-radius: 40px;
+      font-size: 18px;
+      font-weight: bold;
+      box-shadow: 0 8px 20px rgba(34,197,94,0.35);
+      transition: 0.3s;
+    }
+
+    .main-btn:hover {
+      background: #16a34a;
+      transform: translateY(-3px);
+    }
+
+    .hero-card {
+      background: white;
+      border-radius: 25px;
+      padding: 25px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+    }
+
+    .hero-image {
+      height: 420px;
+      border-radius: 20px;
+      background:
+        linear-gradient(rgba(15,118,110,0.15), rgba(15,118,110,0.15)),
+        url("https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80");
+      background-size: cover;
+      background-position: center;
+    }
+
+    section {
+      padding: 80px 5%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 36px;
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #64748b;
+      font-size: 18px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+    }
+
+    .service-card {
+      background: white;
+      padding: 30px;
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .service-card .icon {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .service-card h3 {
+      margin-bottom: 10px;
+      color: #0f766e;
+    }
+
+    .benefits {
+      background: #0f766e;
+      color: white;
+    }
+
+    .benefits .section-title h2,
+    .benefits .section-title p {
+      color: white;
+    }
+
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .benefit-item {
+      background: rgba(255,255,255,0.12);
+      padding: 25px;
+      border-radius: 18px;
+      backdrop-filter: blur(8px);
+    }
+
+    .benefit-item h3 {
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    .before-after {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    .photo-box {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .photo {
+      height: 300px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .before {
+      background-image: url("https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=900&q=80");
+      filter: grayscale(30%);
+    }
+
+    .after {
+      background-image: url("https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=900&q=80");
+    }
+
+    .photo-box h3 {
+      padding: 18px;
+      text-align: center;
+      color: #0f766e;
+    }
+
+    .process {
+      background: #f8fafc;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+    }
+
+    .step {
+      background: white;
+      padding: 30px;
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+
+    .step-number {
+      width: 50px;
+      height: 50px;
+      margin: 0 auto 15px;
+      background: #0f766e;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 22px;
+    }
+
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .testimonial {
+      background: white;
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+
+    .testimonial p {
+      margin-bottom: 15px;
+      color: #475569;
+    }
+
+    .testimonial strong {
+      color: #0f766e;
+    }
+
+    .cta {
+      background: linear-gradient(135deg, #0f766e, #064e3b);
+      color: white;
+      text-align: center;
+      border-radius: 0;
+    }
+
+    .cta h2 {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    footer {
+      background: #020617;
+      color: white;
+      padding: 35px 5%;
+      text-align: center;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background: #22c55e;
+      color: white;
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 34px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+      z-index: 999;
+      animation: pulse 1.8s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(34,197,94,0.7);
+      }
+      70% {
+        transform: scale(1.08);
+        box-shadow: 0 0 0 15px rgba(34,197,94,0);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-text h1 {
+        font-size: 36px;
+      }
+
+      .services,
+      .benefit-grid,
+      .steps,
+      .testimonials,
+      .before-after {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="top-bar">
+    Atendimento rápido em domicílio | Sofás, colchões, cadeiras, poltronas e bancos automotivos
+  </div>
+
+  <header>
+    <div class="logo">LSC <span>Clean</span></div>
+    <a class="header-btn" href="https://wa.me/5569992315490?text=Olá,%20quero%20fazer%20um%20orçamento%20de%20limpeza%20de%20estofados" target="_blank">
+      Chamar no WhatsApp
+    </a>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Seu estofado limpo, cheiroso e livre de sujeiras profundas</h1>
+      <p>
+        Higienização profissional de sofás, colchões, cadeiras, poltronas e bancos automotivos com atendimento rápido e acabamento de qualidade.
+      </p>
+
+      <div class="hero-list">
+        <div>✅ Remoção de sujeira, ácaros e odores</div>
+        <div>✅ Atendimento em domicílio</div>
+        <div>✅ Secagem rápida e resultado visível</div>
+        <div>✅ Orçamento direto pelo WhatsApp</div>
+      </div>
+
+      <a class="main-btn" href="https://wa.me/5569992315490?text=Olá,%20vim%20pela%20landing%20page.%20Quero%20um%20orçamento%20para%20limpeza%20de%20estofados." target="_blank">
+        Solicitar Orçamento Agora
+      </a>
+    </div>
+
+    <div class="hero-card">
+      <div class="hero-image"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">
+      <h2>Serviços Realizados</h2>
+      <p>Limpeza profunda para deixar sua casa mais confortável, limpa e saudável.</p>
+    </div>
+
+    <div class="services">
+      <div class="service-card">
+        <div class="icon">🛋️</div>
+        <h3>Sofás</h3>
+        <p>Higienização completa para remover sujeira, manchas leves e odores.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="icon">🛏️</div>
+        <h3>Colchões</h3>
+        <p>Limpeza profunda para melhorar a higiene e o conforto do seu descanso.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="icon">🪑</div>
+        <h3>Cadeiras</h3>
+        <p>Ideal para cadeiras residenciais, comerciais, escritórios e áreas gourmet.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="icon">🚗</div>
+        <h3>Bancos Automotivos</h3>
+        <p>Remoção de sujeira acumulada e odores nos bancos do seu veículo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="benefits">
+    <div class="section-title">
+      <h2>Por que higienizar seus estofados?</h2>
+      <p>O que parece limpo por fora pode acumular sujeira, poeira, ácaros e mau cheiro por dentro.</p>
+    </div>
+
+    <div class="benefit-grid">
+      <div class="benefit-item">
+        <h3>✅ Mais saúde</h3>
+        <p>Ajuda a reduzir impurezas, poeira e agentes que podem causar alergias.</p>
+      </div>
+
+      <div class="benefit-item">
+        <h3>✅ Melhor aparência</h3>
+        <p>Seu sofá, colchão ou cadeira volta a ter aspecto mais limpo e conservado.</p>
+      </div>
+
+      <div class="benefit-item">
+        <h3>✅ Ambiente cheiroso</h3>
+        <p>Ajuda a eliminar odores desagradáveis causados pelo uso diário.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">
+      <h2>Antes e Depois</h2>
+      <p>Resultado visível já no primeiro atendimento.</p>
+    </div>
+
+    <div class="before-after">
+      <div class="photo-box">
+        <div class="photo before"></div>
+        <h3>Antes da Higienização</h3>
+      </div>
+
+      <div class="photo-box">
+        <div class="photo after"></div>
+        <h3>Depois da Higienização</h3>
+      </div>
+    </div>
+  </section>
+
+  <section class="process">
+    <div class="section-title">
+      <h2>Como funciona o atendimento?</h2>
+      <p>Processo simples, rápido e direto.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>Contato</h3>
+        <p>Você chama no WhatsApp e informa o tipo de estofado.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>Orçamento</h3>
+        <p>Enviamos o valor conforme o serviço solicitado.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>Agendamento</h3>
+        <p>Marcamos o melhor dia e horário para o atendimento.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">4</div>
+        <h3>Higienização</h3>
+        <p>Realizamos a limpeza no local com equipamento profissional.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">
+      <h2>Clientes satisfeitos</h2>
+      <p>Quem faz uma vez, chama de novo.</p>
+    </div>
+
+    <div class="testimonials">
+      <div class="testimonial">
+        <p>“Meu sofá ficou com aparência de novo. Atendimento rápido e muito caprichoso.”</p>
+        <strong>— Cliente residencial</strong>
+      </div>
+
+      <div class="testimonial">
+        <p>“Gostei bastante do resultado. Tirou o mau cheiro e deixou o ambiente mais agradável.”</p>
+        <strong>— Cliente em Porto Velho</strong>
+      </div>
+
+      <div class="testimonial">
+        <p>“Serviço bem feito, pontual e com ótimo acabamento. Recomendo.”</p>
+        <strong>— Cliente satisfeito</strong>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Quer deixar seu sofá limpo hoje?</h2>
+    <p>Chame agora no WhatsApp e solicite um orçamento sem compromisso.</p>
+
+    <a class="main-btn" href="https://wa.me/5569992315490?text=Olá,%20quero%20agendar%20uma%20limpeza%20de%20estofados." target="_blank">
+      Falar com Atendente
+    </a>
+  </section>
+
+  <footer>
+    <p><strong>LSC Clean - Limpeza de Estofados</strong></p>
+    <p>Atendimento em domicílio | Porto Velho e região</p>
+    <p>WhatsApp: (69) 99231-5490</p>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/5569992315490?text=Olá,%20quero%20um%20orçamento%20de%20limpeza%20de%20estofados." target="_blank">
+    ☎
+  </a>
+
+</body>
+</html>
