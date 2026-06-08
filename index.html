@@ -1,508 +1,575 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rondônia Clean | Limpeza Profissional de Estofados</title>
+  <meta name="description" content="Limpeza e higienização profissional de sofás, colchões, cadeiras, camas e poltronas em Rondônia. Solicite seu orçamento pelo WhatsApp.">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
 
-<title>Rondônia Clean | Limpeza de Sofás, Colchões e Poltronas</title>
+  <style>
+    :root{
+      --primary:#25D366;
+      --brand-blue:#123C8C;
+      --brand-cyan:#16B6D9;
+      --brand-green:#25D366;
+      --ink:#0B1437;
+      --muted:#53657D;
+    }
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    *{scroll-behavior:smooth}
 
-<style>
-:root{
---azul:#0052cc;
---verde:#25D366;
---escuro:#0f172a;
---cinza:#f8fafc;
-}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#EAFBFF 0%,#FFFFFF 42%,#F6FFF9 100%);
+      color:var(--ink);
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+    nav.container-fluid{
+      position:sticky;
+      top:0;
+      z-index:20;
+      background:rgba(255,255,255,.90);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(18,60,140,.10);
+      box-shadow:0 10px 30px rgba(11,20,55,.06);
+      padding:.7rem 1.1rem;
+    }
 
-body{
-font-family:Arial, sans-serif;
-overflow-x:hidden;
-background:#ffffff;
-color:#0f172a;
-}
+    nav strong{
+      color:var(--brand-blue);
+      font-size:1.1rem;
+      letter-spacing:-.02em;
+    }
 
-nav{
-background:white;
-box-shadow:0 5px 20px rgba(0,0,0,.08);
-position:sticky;
-top:0;
-z-index:999;
-}
+    nav a{
+      color:var(--brand-blue);
+      font-weight:700;
+      text-decoration:none;
+    }
 
-.hero{
-padding:70px 20px;
-background:linear-gradient(135deg,#f5f9ff,#ffffff);
-text-align:center;
-}
+    nav a[role=button]{
+      background:var(--brand-green);
+      border-color:var(--brand-green);
+      color:#fff;
+      border-radius:999px;
+      padding:.65rem 1rem;
+      box-shadow:0 10px 22px rgba(37,211,102,.28);
+    }
 
-.logo{
-max-width:280px;
-margin-bottom:25px;
-}
+    main.container{
+      padding-top:3.4rem;
+      padding-bottom:2rem;
+    }
 
-.hero h1{
-font-size:3rem;
-font-weight:900;
-line-height:1.1;
-color:var(--escuro);
-}
+    .grid{
+      align-items:center;
+      gap:2.2rem;
+    }
 
-.hero h1 span{
-color:var(--azul);
-}
+    .hero-badge{
+      display:inline-flex;
+      gap:.45rem;
+      align-items:center;
+      background:#DFF8FF;
+      color:#0B6090;
+      border:1px solid rgba(22,182,217,.25);
+      padding:.45rem .8rem;
+      border-radius:999px;
+      font-size:.86rem;
+      font-weight:800;
+      margin-bottom:1rem;
+    }
 
-.hero p{
-font-size:1.2rem;
-margin:20px 0;
-}
+    h1{
+      font-size:clamp(2.35rem,5.5vw,4.9rem);
+      line-height:1.02;
+      letter-spacing:-.06em;
+      margin-bottom:1rem;
+      color:var(--ink);
+    }
 
-.cta{
-background:#25D366;
-padding:18px 35px;
-border-radius:50px;
-color:white !important;
-font-weight:bold;
-text-decoration:none;
-display:inline-block;
-font-size:1.1rem;
-box-shadow:0 10px 25px rgba(37,211,102,.35);
-}
+    h1 span{
+      display:block;
+      background:linear-gradient(90deg,#123C8C,#2364E8,#25D366);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
 
-.cta:hover{
-transform:scale(1.03);
-}
+    h2{
+      letter-spacing:-.04em;
+      color:var(--ink);
+    }
 
-.benefits{
-padding:60px 20px;
-background:#fff;
-}
+    h3{
+      color:var(--brand-blue);
+    }
 
-.benefits-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
+    p{
+      color:var(--muted);
+      font-size:1.06rem;
+    }
 
-.card{
-padding:25px;
-border-radius:15px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-background:white;
-}
+    .hero-copy{
+      max-width:740px;
+    }
 
-.card h3{
-color:var(--azul);
-}
+    .cta-row{
+      display:flex;
+      gap:.8rem;
+      flex-wrap:wrap;
+      align-items:center;
+      margin-top:1.5rem;
+    }
 
-.services{
-padding:70px 20px;
-background:#f8fafc;
-}
+    .whatsapp{
+      background:linear-gradient(135deg,#25D366,#18B455);
+      border:none;
+      border-radius:999px;
+      color:#fff;
+      font-weight:900;
+      text-transform:uppercase;
+      box-shadow:0 16px 38px rgba(37,211,102,.32);
+      padding:.95rem 1.35rem;
+    }
 
-.services-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
-}
+    .secondary{
+      border-radius:999px;
+      background:#fff;
+      color:var(--brand-blue);
+      border:1px solid rgba(18,60,140,.18);
+      font-weight:800;
+    }
 
-.service{
-background:white;
-padding:25px;
-border-radius:15px;
-text-align:center;
-box-shadow:0 10px 20px rgba(0,0,0,.08);
-}
+    .hero-card{
+      background:rgba(255,255,255,.82);
+      border:1px solid rgba(18,60,140,.10);
+      border-radius:34px;
+      padding:1rem;
+      box-shadow:0 30px 70px rgba(18,60,140,.14);
+    }
 
-.service h3{
-color:var(--azul);
-margin-top:15px;
-}
+    .logo-img{
+      display:block;
+      max-width:260px;
+      margin:0 auto 1.4rem;
+      object-fit:contain;
+    }
 
-.slider{
-position:relative;
-width:100%;
-height:230px;
-overflow:hidden;
-border-radius:12px;
-margin-bottom:15px;
-background:#e5e7eb;
-}
+    figure img,
+    .before-after img{
+      width:100%;
+      border-radius:26px;
+      object-fit:cover;
+      box-shadow:0 18px 42px rgba(11,20,55,.12);
+    }
 
-.slider img{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-object-fit:cover;
-opacity:0;
-transition:opacity .8s ease-in-out;
-}
+    figure img{
+      max-height:420px;
+    }
 
-.slider img.active{
-opacity:1;
-}
+    figcaption{
+      text-align:center;
+      color:#7A8AA0;
+      font-size:.8rem;
+      margin-top:.6rem;
+    }
 
-.urgency{
-background:#dc2626;
-color:white;
-text-align:center;
-padding:45px 20px;
-border-radius:20px;
-margin:40px 0;
-}
+    .section{
+      padding:4.2rem 0;
+    }
 
-.urgency h2,
-.urgency p{
-color:white;
-}
+    .section-title{
+      text-align:center;
+      max-width:760px;
+      margin:0 auto 2rem;
+    }
 
-.proof{
-padding:70px 20px;
-}
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+      gap:1rem;
+    }
 
-.testimonials{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:20px;
-}
+    .mini,
+    article.card,
+    details{
+      background:rgba(255,255,255,.88);
+      border:1px solid rgba(18,60,140,.10);
+      border-radius:24px;
+      padding:1.25rem;
+      box-shadow:0 18px 45px rgba(11,20,55,.07);
+    }
 
-.testimonial{
-padding:25px;
-background:white;
-border-radius:15px;
-box-shadow:0 10px 20px rgba(0,0,0,.08);
-}
+    .mini h3{
+      margin-bottom:.45rem;
+      color:var(--brand-blue);
+    }
 
-.faq{
-padding:70px 20px;
-background:#f8fafc;
-border-radius:20px;
-}
+    .icon{
+      width:48px;
+      height:48px;
+      border-radius:16px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg,#E7F8FF,#DFFBEA);
+      font-size:1.35rem;
+      margin-bottom:.8rem;
+    }
 
-.final-cta{
-padding:80px 20px;
-text-align:center;
-background:linear-gradient(135deg,var(--azul),#003e9a);
-color:white;
-border-radius:20px;
-margin-top:40px;
-}
+    .before-after{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:1.1rem;
+    }
 
-.final-cta h2,
-.final-cta p{
-color:white;
-}
+    .photo-wrap{
+      position:relative;
+    }
 
-.whatsapp-float{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:#fff !important;
-padding:16px 24px;
-border-radius:50px;
-font-weight:700;
-text-decoration:none;
-z-index:9999;
-box-shadow:0 8px 25px rgba(37,211,102,.45);
-animation:pulse 1.8s infinite;
-}
+    .label{
+      position:absolute;
+      left:18px;
+      top:18px;
+      background:rgba(11,20,55,.82);
+      color:#fff;
+      padding:.35rem .8rem;
+      border-radius:999px;
+      font-weight:900;
+      font-size:.8rem;
+    }
 
-.whatsapp-float:hover{
-transform:scale(1.05);
-}
+    .guarantee{
+      background:radial-gradient(circle at top left,#29D872 0%,#123C8C 55%,#08142F 100%);
+      border-radius:34px;
+      padding:2rem;
+      color:#fff;
+      box-shadow:0 30px 70px rgba(18,60,140,.25);
+    }
 
-@keyframes pulse{
-0%{
-box-shadow:0 0 0 0 rgba(37,211,102,.7);
-}
-70%{
-box-shadow:0 0 0 20px rgba(37,211,102,0);
-}
-100%{
-box-shadow:0 0 0 0 rgba(37,211,102,0);
-}
-}
+    .guarantee h2,
+    .guarantee h3,
+    .guarantee p{
+      color:#fff;
+    }
 
-footer{
-text-align:center;
-padding:30px 0;
-}
+    details summary{
+      color:var(--brand-blue);
+      font-weight:900;
+    }
 
-@media(max-width:768px){
+    section[aria-label="Subscribe example"]{
+      padding:4rem 0;
+      background:linear-gradient(135deg,#EAFBFF,#EFFFF5);
+    }
 
-nav ul li:not(:first-child){
-font-size:.85rem;
-}
+    section[aria-label="Subscribe example"] article{
+      border-radius:34px;
+      border:1px solid rgba(37,211,102,.20);
+      box-shadow:0 26px 62px rgba(37,211,102,.13);
+    }
 
-.hero{
-padding:45px 15px;
-}
+    input{
+      border-radius:16px!important;
+      border-color:rgba(18,60,140,.16)!important;
+      background:#fff!important;
+    }
 
-.logo{
-max-width:220px;
-}
+    button{
+      border-radius:16px;
+      font-weight:900;
+      background:var(--brand-green);
+      border-color:var(--brand-green);
+    }
 
-.hero h1{
-font-size:2.1rem;
-}
+    .floating-wa{
+      position:fixed;
+      right:22px;
+      bottom:22px;
+      z-index:50;
+      background:#25D366;
+      color:#fff;
+      border-radius:999px;
+      padding:.9rem 1.15rem;
+      font-weight:900;
+      text-decoration:none;
+      box-shadow:0 18px 45px rgba(37,211,102,.35);
+    }
 
-.hero p{
-font-size:1rem;
-}
+    footer.container{
+      text-align:center;
+      padding:2rem 0;
+      color:#63748A;
+    }
 
-.cta{
-width:100%;
-padding:16px 20px;
-}
+    @media(max-width:768px){
+      main.container{
+        padding-top:2rem;
+      }
 
-.slider{
-height:210px;
-}
+      .hero-card{
+        padding:.75rem;
+      }
 
-.whatsapp-float{
-left:15px;
-right:15px;
-bottom:15px;
-text-align:center;
-}
-}
-</style>
+      .logo-img{
+        max-width:210px;
+      }
+
+      .floating-wa{
+        left:16px;
+        right:16px;
+        text-align:center;
+      }
+
+      .cta-row a{
+        width:100%;
+        text-align:center;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <nav class="container-fluid">
+    <ul>
+      <li><strong>Rondônia Clean</strong></li>
+    </ul>
+    <ul>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#depoimentos">Depoimentos</a></li>
+      <li><a href="https://wa.me/5569992315490?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20da%20Rond%C3%B4nia%20Clean" role="button">WhatsApp</a></li>
+    </ul>
+  </nav>
 
-<nav class="container-fluid">
-<ul>
-<li><strong>Rondônia Clean</strong></li>
-</ul>
+  <main class="container">
+    <div class="grid">
+      <section class="hero-copy">
+        <span class="hero-badge">✨ Limpeza profunda • Sofás • Colchões • Poltronas</span>
 
-<ul>
-<li><a href="#servicos">Serviços</a></li>
-<li><a href="#depoimentos">Depoimentos</a></li>
-<li>
-<a href="https://wa.me/5569992315490?text=Olá,%20quero%20um%20orçamento%20para%20limpeza%20de%20estofados" role="button">
-WhatsApp
-</a>
-</li>
-</ul>
-</nav>
+        <hgroup>
+          <h1>
+            Seu sofá limpo, cheiroso e com aparência de novo.
+            <span>Rondônia Clean resolve.</span>
+          </h1>
+          <h3>Higienização profissional que remove sujeira, ácaros, odores e impurezas profundas.</h3>
+        </hgroup>
 
-<main class="container">
+        <p>
+          Atendimento cuidadoso para residências e empresas em Rondônia.
+          Serviço ideal para quem quer mais conforto, saúde e uma casa com sensação real de limpeza.
+        </p>
 
-<section class="hero">
+        <div class="cta-row">
+          <a class="whatsapp" href="https://wa.me/5569992315490?text=Ol%C3%A1%2C%20quero%20meu%20or%C3%A7amento%20agora%20para%20higieniza%C3%A7%C3%A3o%20de%20estofados" role="button">
+            Quero meu orçamento agora
+          </a>
+          <a class="secondary" href="#antes-depois" role="button">Ver antes e depois</a>
+        </div>
+      </section>
 
-<img src="logo.png" class="logo" alt="Rondônia Clean">
+      <section class="hero-card">
+        <img class="logo-img" src="logo.png" alt="Rondônia Clean">
 
-<h1>
-Seu sofá parece velho, sujo ou encardido?
-<br>
-<span>A Rondônia Clean deixa ele limpo de novo.</span>
-</h1>
+        <figure>
+          <img src="sofa1.jpg" alt="Sofá higienizado pela Rondônia Clean">
+          <figcaption>
+            <a href="#" target="_blank">Resultado profissional para seu estofado</a>
+          </figcaption>
+        </figure>
+      </section>
+    </div>
 
-<p>
-Limpeza profissional de sofás, colchões, camas, cadeiras e poltronas.
-Removemos sujeiras, odores, ácaros e impurezas profundas.
-</p>
+    <section class="section" id="antes-depois">
+      <div class="section-title">
+        <hgroup>
+          <h2>Antes e depois que vende sozinho</h2>
+          <h3>Seu cliente percebe a diferença na hora</h3>
+        </hgroup>
+        <p>A higienização profissional renova a aparência do estofado e melhora a sensação de limpeza do ambiente.</p>
+      </div>
 
-<a class="cta" href="https://wa.me/5569992315490?text=Olá,%20quero%20um%20orçamento%20para%20limpeza%20de%20sofá,%20cama,%20cadeira%20ou%20poltrona">
-QUERO MEU ORÇAMENTO AGORA
-</a>
+      <div class="before-after">
+        <div class="photo-wrap">
+          <span class="label">Antes</span>
+          <img src="sofa2.jpg" alt="Sofá antes da limpeza">
+        </div>
 
-</section>
+        <div class="photo-wrap">
+          <span class="label">Depois</span>
+          <img src="sofa3.jpg" alt="Sofá após a limpeza">
+        </div>
+      </div>
+    </section>
 
-<section class="benefits">
+    <section class="section" id="beneficios">
+      <div class="section-title">
+        <hgroup>
+          <h2>Benefícios que sua família sente</h2>
+          <h3>Mais saúde, conforto e beleza para sua casa</h3>
+        </hgroup>
+      </div>
 
-<h2>Por que contratar a Rondônia Clean?</h2>
+      <div class="cards">
+        <div class="mini">
+          <div class="icon">🛡️</div>
+          <h3>Remove ácaros</h3>
+          <p>Ajuda a reduzir impurezas invisíveis acumuladas no tecido.</p>
+        </div>
 
-<div class="benefits-grid">
+        <div class="mini">
+          <div class="icon">🌿</div>
+          <h3>Elimina odores</h3>
+          <p>Ideal para mau cheiro de uso diário, pets, suor e umidade.</p>
+        </div>
 
-<div class="card">
-<h3>✅ Higienização Profunda</h3>
-<p>Remove sujeiras que a limpeza comum não consegue alcançar.</p>
-</div>
+        <div class="mini">
+          <div class="icon">✨</div>
+          <h3>Revitaliza o tecido</h3>
+          <p>Melhora a aparência do sofá, colchão, cadeira ou poltrona.</p>
+        </div>
 
-<div class="card">
-<h3>✅ Redução de Ácaros</h3>
-<p>Mais saúde, conforto e bem-estar para sua família.</p>
-</div>
+        <div class="mini">
+          <div class="icon">💧</div>
+          <h3>Limpeza profunda</h3>
+          <p>Processo feito com cuidado para alcançar sujeiras mais difíceis.</p>
+        </div>
+      </div>
+    </section>
 
-<div class="card">
-<h3>✅ Remove Mau Cheiro</h3>
-<p>Ajuda a eliminar odores de suor, pets, mofo e uso diário.</p>
-</div>
+    <section class="section" id="servicos">
+      <div class="section-title">
+        <hgroup>
+          <h2>Serviços da Rondônia Clean</h2>
+          <h3>Limpeza profissional para casa, escritório e veículo</h3>
+        </hgroup>
+      </div>
 
-<div class="card">
-<h3>✅ Atendimento em Domicílio</h3>
-<p>Você não precisa retirar seus móveis de casa.</p>
-</div>
+      <div class="cards">
+        <div class="mini">
+          <h3>Sofás</h3>
+          <p>Higienização de sofás de 2, 3 lugares, retráteis e de canto.</p>
+        </div>
 
-</div>
+        <div class="mini">
+          <h3>Colchões e camas</h3>
+          <p>Mais higiene para o lugar onde você descansa todos os dias.</p>
+        </div>
 
-</section>
+        <div class="mini">
+          <h3>Cadeiras e poltronas</h3>
+          <p>Perfeito para residências, escritórios, clínicas e salões.</p>
+        </div>
 
-<section class="services" id="servicos">
+        <div class="mini">
+          <h3>Bancos automotivos</h3>
+          <p>Interior do carro mais limpo, agradável e livre de odores.</p>
+        </div>
+      </div>
+    </section>
 
-<h2>Nossos Serviços</h2>
+    <section class="section" id="depoimentos">
+      <div class="section-title">
+        <hgroup>
+          <h2>Clientes satisfeitos</h2>
+          <h3>Atendimento com capricho e resultado visível</h3>
+        </hgroup>
+      </div>
 
-<div class="services-grid">
+      <div class="cards">
+        <article class="card">
+          <p>“Meu sofá ficou com outra aparência. Atendimento rápido e muito cuidadoso.”</p>
+          <footer>★★★★★ Cliente Rondônia Clean</footer>
+        </article>
 
-<div class="service">
-<div class="slider">
-<img src="sofa1.jpg" class="slide active" alt="Limpeza de sofá 1">
-<img src="sofa2.jpg" class="slide" alt="Limpeza de sofá 2">
-<img src="sofa3.jpg" class="slide" alt="Limpeza de sofá 3">
-</div>
-<h3>Limpeza de Sofás</h3>
-<p>Renovação completa do seu sofá, removendo sujeira, manchas superficiais e odores.</p>
-</div>
+        <article class="card">
+          <p>“Saiu o cheiro ruim do colchão e a casa ficou muito mais agradável.”</p>
+          <footer>★★★★★ Cliente Rondônia Clean</footer>
+        </article>
 
-<div class="service">
-<div class="slider">
-<img src="colchao1.jpg" class="slide active" alt="Limpeza de colchão 1">
-<img src="colchao2.jpg" class="slide" alt="Limpeza de colchão 2">
-<img src="colchao3.jpg" class="slide" alt="Limpeza de colchão 3">
-</div>
-<h3>Limpeza de Colchões</h3>
-<p>Higienização para reduzir ácaros, poeira, suor e impurezas acumuladas.</p>
-</div>
+        <article class="card">
+          <p>“Serviço caprichado. Chamei pelo WhatsApp e fui atendida muito bem.”</p>
+          <footer>★★★★★ Cliente Rondônia Clean</footer>
+        </article>
+      </div>
+    </section>
 
-<div class="service">
-<div class="slider">
-<img src="poltrona1.jpg" class="slide active" alt="Limpeza de poltrona 1">
-<img src="cadeira1.jpg" class="slide" alt="Limpeza de cadeira 1">
-<img src="poltrona2.jpg" class="slide" alt="Limpeza de poltrona 2">
-</div>
-<h3>Poltronas e Cadeiras</h3>
-<p>Ideal para casas, escritórios, clínicas, salões, recepções e empresas.</p>
-</div>
+    <section class="section">
+      <article class="guarantee">
+        <hgroup>
+          <h2>Garantia de atendimento profissional</h2>
+          <h3>Avaliação antes do serviço e transparência no orçamento</h3>
+        </hgroup>
 
-</div>
+        <p>
+          A Rondônia Clean avalia o estado do estofado, orienta sobre o procedimento ideal
+          e executa a limpeza com atenção aos detalhes. Manchas antigas podem variar conforme
+          o tipo de tecido e tempo de exposição.
+        </p>
+      </article>
+    </section>
 
-</section>
+    <section class="section" id="faq">
+      <div class="section-title">
+        <hgroup>
+          <h2>Perguntas frequentes</h2>
+          <h3>Tire suas dúvidas antes de solicitar o orçamento</h3>
+        </hgroup>
+      </div>
 
-<section class="urgency">
+      <details>
+        <summary>Quanto tempo demora a higienização?</summary>
+        <p>Depende do tamanho e estado do estofado. O tempo exato é informado no atendimento pelo WhatsApp.</p>
+      </details>
 
-<h2>⚠️ Agenda da Semana Quase Completa</h2>
+      <details>
+        <summary>O estofado fica molhado?</summary>
+        <p>Ele pode ficar levemente úmido e precisa de algumas horas para secagem completa, conforme ventilação do ambiente.</p>
+      </details>
 
-<p>
-Entre em contato agora pelo WhatsApp e consulte os horários disponíveis.
-</p>
+      <details>
+        <summary>Vocês atendem em domicílio?</summary>
+        <p>Sim. O atendimento é combinado conforme a localização do cliente em Rondônia.</p>
+      </details>
 
-<a class="cta" href="https://wa.me/5569992315490?text=Olá,%20quero%20reservar%20um%20horário%20para%20limpeza%20de%20estofados">
-RESERVAR HORÁRIO
-</a>
+      <details>
+        <summary>Remove todas as manchas?</summary>
+        <p>A remoção depende do tipo de mancha, tecido e tempo de exposição. Fazemos avaliação antes do procedimento.</p>
+      </details>
+    </section>
+  </main>
 
-</section>
+  <section aria-label="Subscribe example">
+    <div class="container">
+      <article>
+        <hgroup>
+          <h2>Seu estofado merece esse cuidado hoje</h2>
+          <h3>Peça seu orçamento pelo WhatsApp e receba atendimento rápido.</h3>
+        </hgroup>
 
-<section class="proof" id="depoimentos">
+        <form class="grid">
+          <input type="text" id="firstname" name="firstname" placeholder="Seu nome" aria-label="Seu nome" required>
+          <input type="email" id="email" name="email" placeholder="Seu e-mail" aria-label="Seu e-mail" required>
 
-<h2>O que nossos clientes dizem</h2>
+          <button type="submit" onclick="event.preventDefault(); window.location.href='https://wa.me/5569992315490?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20da%20Rond%C3%B4nia%20Clean';">
+            Chamar no WhatsApp
+          </button>
+        </form>
+      </article>
+    </div>
+  </section>
 
-<div class="testimonials">
+  <a class="floating-wa" href="https://wa.me/5569992315490?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20da%20Rond%C3%B4nia%20Clean">
+    💬 Orçamento no WhatsApp
+  </a>
 
-<div class="testimonial">
-⭐⭐⭐⭐⭐
-<p>Meu sofá ficou muito mais limpo e cheiroso. Atendimento excelente.</p>
-<strong>Maria S.</strong>
-</div>
-
-<div class="testimonial">
-⭐⭐⭐⭐⭐
-<p>Serviço profissional, pontual e com ótimo resultado.</p>
-<strong>João P.</strong>
-</div>
-
-<div class="testimonial">
-⭐⭐⭐⭐⭐
-<p>Meu colchão ficou muito melhor. Recomendo demais.</p>
-<strong>Fernanda R.</strong>
-</div>
-
-</div>
-
-</section>
-
-<section class="faq">
-
-<h2>Perguntas Frequentes</h2>
-
-<details>
-<summary>Quanto tempo demora?</summary>
-<p>Em média entre 2 e 5 horas.</p>
-</details>
-
-<details>
-<summary>O sofá fica encharcado?</summary>
-<p>Não. Utilizamos técnica profissional com controle de umidade.</p>
-</details>
-
-<details>
-<summary>Remove todas as manchas?</summary>
-<p>Grande parte das manchas pode ser removida ou suavizada, dependendo do tipo de tecido e do tempo da mancha.</p>
-</details>
-
-<details>
-<summary>Atende em domicílio?</summary>
-<p>Sim. O serviço é realizado no local, com equipamento profissional.</p>
-</details>
-
-</section>
-
-<section class="final-cta">
-
-<h2>Seu sofá, colchão ou poltrona precisa de uma limpeza profissional?</h2>
-
-<p>
-Clique abaixo e fale direto no WhatsApp para receber seu orçamento.
-</p>
-
-<br>
-
-<a class="cta" href="https://wa.me/5569992315490?text=Olá,%20quero%20um%20orçamento%20para%20limpeza%20de%20estofados">
-SOLICITAR ORÇAMENTO PELO WHATSAPP
-</a>
-
-</section>
-
-</main>
-
-<footer class="container">
-<small>
-<a href="#servicos">Serviços</a> •
-<a href="https://wa.me/5569992315490">WhatsApp</a>
-<br>
-Rondônia Clean • Higienização Profissional
-</small>
-</footer>
-
-<a class="whatsapp-float" href="https://wa.me/5569992315490?text=Olá,%20quero%20um%20orçamento%20para%20limpeza%20de%20estofados">
-💬 ORÇAMENTO GRÁTIS
-</a>
-
-<script>
-const sliders = document.querySelectorAll('.slider');
-
-sliders.forEach(slider => {
-const slides = slider.querySelectorAll('.slide');
-let index = 0;
-
-setInterval(() => {
-slides[index].classList.remove('active');
-index = (index + 1) % slides.length;
-slides[index].classList.add('active');
-}, 3000);
-});
-</script>
-
+  <footer class="container">
+    <small>
+      <a href="https://wa.me/5569992315490">WhatsApp: (69) 99231-5490</a>
+      •
+      <a href="#">Rondônia Clean</a>
+    </small>
+  </footer>
 </body>
 </html>
