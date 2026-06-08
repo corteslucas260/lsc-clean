@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Rondônia Clean | Limpeza de Sofás, Colchões e Poltronas</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+
+<style>
+:root{
+--azul:#0052cc;
+--verde:#25D366;
+--escuro:#0f172a;
+--cinza:#f8fafc;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial, sans-serif;
+overflow-x:hidden;
+background:#ffffff;
+color:#0f172a;
+}
+
+nav{
+background:white;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+position:sticky;
+top:0;
+z-index:999;
+}
+
+.hero{
+padding:70px 20px;
+background:linear-gradient(135deg,#f5f9ff,#ffffff);
+text-align:center;
+}
+
+.logo{
+max-width:280px;
+margin-bottom:25px;
+}
+
+.hero h1{
+font-size:3rem;
+font-weight:900;
+line-height:1.1;
+color:var(--escuro);
+}
+
+.hero h1 span{
+color:var(--azul);
+}
+
+.hero p{
+font-size:1.2rem;
+margin:20px 0;
+}
+
+.cta{
+background:#25D366;
+padding:18px 35px;
+border-radius:50px;
+color:white !important;
+font-weight:bold;
+text-decoration:none;
+display:inline-block;
+font-size:1.1rem;
+box-shadow:0 10px 25px rgba(37,211,102,.35);
+}
+
+.cta:hover{
+transform:scale(1.03);
+}
+
+.benefits{
+padding:60px 20px;
+background:#fff;
+}
+
+.benefits-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+padding:25px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+background:white;
+}
+
+.card h3{
+color:var(--azul);
+}
+
+.services{
+padding:70px 20px;
+background:#f8fafc;
+}
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.service{
+background:white;
+padding:25px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+.service h3{
+color:var(--azul);
+margin-top:15px;
+}
+
+.slider{
+position:relative;
+width:100%;
+height:230px;
+overflow:hidden;
+border-radius:12px;
+margin-bottom:15px;
+background:#e5e7eb;
+}
+
+.slider img{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+opacity:0;
+transition:opacity .8s ease-in-out;
+}
+
+.slider img.active{
+opacity:1;
+}
+
+.urgency{
+background:#dc2626;
+color:white;
+text-align:center;
+padding:45px 20px;
+border-radius:20px;
+margin:40px 0;
+}
+
+.urgency h2,
+.urgency p{
+color:white;
+}
+
+.proof{
+padding:70px 20px;
+}
+
+.testimonials{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.testimonial{
+padding:25px;
+background:white;
+border-radius:15px;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+.faq{
+padding:70px 20px;
+background:#f8fafc;
+border-radius:20px;
+}
+
+.final-cta{
+padding:80px 20px;
+text-align:center;
+background:linear-gradient(135deg,var(--azul),#003e9a);
+color:white;
+border-radius:20px;
+margin-top:40px;
+}
+
+.final-cta h2,
+.final-cta p{
+color:white;
+}
+
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:#fff !important;
+padding:16px 24px;
+border-radius:50px;
+font-weight:700;
+text-decoration:none;
+z-index:9999;
+box-shadow:0 8px 25px rgba(37,211,102,.45);
+animation:pulse 1.8s infinite;
+}
+
+.whatsapp-float:hover{
+transform:scale(1.05);
+}
+
+@keyframes pulse{
+0%{
+box-shadow:0 0 0 0 rgba(37,211,102,.7);
+}
+70%{
+box-shadow:0 0 0 20px rgba(37,211,102,0);
+}
+100%{
+box-shadow:0 0 0 0 rgba(37,211,102,0);
+}
+}
+
+footer{
+text-align:center;
+padding:30px 0;
+}
+
+@media(max-width:768px){
+
+nav ul li:not(:first-child){
+font-size:.85rem;
+}
+
+.hero{
+padding:45px 15px;
+}
+
+.logo{
+max-width:220px;
+}
+
+.hero h1{
+font-size:2.1rem;
+}
+
+.hero p{
+font-size:1rem;
+}
+
+.cta{
+width:100%;
+padding:16px 20px;
+}
+
+.slider{
+height:210px;
+}
+
+.whatsapp-float{
+left:15px;
+right:15px;
+bottom:15px;
+text-align:center;
+}
+}
+</style>
+</head>
+
+<body>
+
+<nav class="container-fluid">
+<ul>
+<li><strong>Rondônia Clean</strong></li>
+</ul>
+
+<ul>
+<li><a href="#servicos">Serviços</a></li>
+<li><a href="#depoimentos">Depoimentos</a></li>
+<li>
+<a href="https://wa.me/5569992315490?text=Olá,%20quero%20um%20orçamento%20para%20limpeza%20de%20estofados" role="button">
+WhatsApp
+</a>
+</li>
+</ul>
+</nav>
+
+<main class="container">
+
+<section class="hero">
+
+<img src="logo.png" class="logo" alt="Rondônia Clean">
+
+<h1>
+Seu sofá parece velho, sujo ou encardido?
+<br>
+<span>A Rondônia Clean deixa ele limpo de novo.</span>
+</h1>
+
+<p>
+Limpeza profissional de sofás, colchões, camas, cadeiras e poltronas.
+Removemos sujeiras, odores, ácaros e impurezas profundas.
+</p>
+
+<a class="cta" href="https://wa.me/5569992315490?text=Olá,%20quero%20um%20orçamento%20para%20limpeza%20de%20sofá,%20cama,%20cadeira%20ou%20poltrona">
+QUERO MEU ORÇAMENTO AGORA
+</a>
+
+</section>
+
+<section class="benefits">
+
+<h2>Por que contratar a Rondônia Clean?</h2>
+
+<div class="benefits-grid">
+
+<div class="card">
+<h3>✅ Higienização Profunda</h3>
+<p>Remove sujeiras que a limpeza comum não consegue alcançar.</p>
+</div>
+
+<div class="card">
+<h3>✅ Redução de Ácaros</h3>
+<p>Mais saúde, conforto e bem-estar para sua família.</p>
+</div>
+
+<div class="card">
+<h3>✅ Remove Mau Cheiro</h3>
+<p>Ajuda a eliminar odores de suor, pets, mofo e uso diário.</p>
+</div>
+
+<div class="card">
+<h3>✅ Atendimento em Domicílio</h3>
+<p>Você não precisa retirar seus móveis de casa.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="services" id="servicos">
+
+<h2>Nossos Serviços</h2>
+
+<div class="services-grid">
+
+<div class="service">
+<div class="slider">
+<img src="sofa1.jpg" class="slide active" alt="Limpeza de sofá 1">
+<img src="sofa2.jpg" class="slide" alt="Limpeza de sofá 2">
+<img src="sofa3.jpg" class="slide" alt="Limpeza de sofá 3">
+</div>
+<h3>Limpeza de Sofás</h3>
+<p>Renovação completa do seu sofá, removendo sujeira, manchas superficiais e odores.</p>
+</div>
+
+<div class="service">
+<div class="slider">
+<img src="colchao1.jpg" class="slide active" alt="Limpeza de colchão 1">
+<img src="colchao2.jpg" class="slide" alt="Limpeza de colchão 2">
+<img src="colchao3.jpg" class="slide" alt="Limpeza de colchão 3">
+</div>
+<h3>Limpeza de Colchões</h3>
+<p>Higienização para reduzir ácaros, poeira, suor e impurezas acumuladas.</p>
+</div>
+
+<div class="service">
+<div class="slider">
+<img src="poltrona1.jpg" class="slide active" alt="Limpeza de poltrona 1">
+<img src="cadeira1.jpg" class="slide" alt="Limpeza de cadeira 1">
+<img src="poltrona2.jpg" class="slide" alt="Limpeza de poltrona 2">
+</div>
+<h3>Poltronas e Cadeiras</h3>
+<p>Ideal para casas, escritórios, clínicas, salões, recepções e empresas.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="urgency">
+
+<h2>⚠️ Agenda da Semana Quase Completa</h2>
+
+<p>
+Entre em contato agora pelo WhatsApp e consulte os horários disponíveis.
+</p>
+
+<a class="cta" href="https://wa.me/5569992315490?text=Olá,%20quero%20reservar%20um%20horário%20para%20limpeza%20de%20estofados">
+RESERVAR HORÁRIO
+</a>
+
+</section>
+
+<section class="proof" id="depoimentos">
+
+<h2>O que nossos clientes dizem</h2>
+
+<div class="testimonials">
+
+<div class="testimonial">
+⭐⭐⭐⭐⭐
+<p>Meu sofá ficou muito mais limpo e cheiroso. Atendimento excelente.</p>
+<strong>Maria S.</strong>
+</div>
+
+<div class="testimonial">
+⭐⭐⭐⭐⭐
+<p>Serviço profissional, pontual e com ótimo resultado.</p>
+<strong>João P.</strong>
+</div>
+
+<div class="testimonial">
+⭐⭐⭐⭐⭐
+<p>Meu colchão ficou muito melhor. Recomendo demais.</p>
+<strong>Fernanda R.</strong>
+</div>
+
+</div>
+
+</section>
+
+<section class="faq">
+
+<h2>Perguntas Frequentes</h2>
+
+<details>
+<summary>Quanto tempo demora?</summary>
+<p>Em média entre 2 e 5 horas.</p>
+</details>
+
+<details>
+<summary>O sofá fica encharcado?</summary>
+<p>Não. Utilizamos técnica profissional com controle de umidade.</p>
+</details>
+
+<details>
+<summary>Remove todas as manchas?</summary>
+<p>Grande parte das manchas pode ser removida ou suavizada, dependendo do tipo de tecido e do tempo da mancha.</p>
+</details>
+
+<details>
+<summary>Atende em domicílio?</summary>
+<p>Sim. O serviço é realizado no local, com equipamento profissional.</p>
+</details>
+
+</section>
+
+<section class="final-cta">
+
+<h2>Seu sofá, colchão ou poltrona precisa de uma limpeza profissional?</h2>
+
+<p>
+Clique abaixo e fale direto no WhatsApp para receber seu orçamento.
+</p>
+
+<br>
+
+<a class="cta" href="https://wa.me/5569992315490?text=Olá,%20quero%20um%20orçamento%20para%20limpeza%20de%20estofados">
+SOLICITAR ORÇAMENTO PELO WHATSAPP
+</a>
+
+</section>
+
+</main>
+
+<footer class="container">
+<small>
+<a href="#servicos">Serviços</a> •
+<a href="https://wa.me/5569992315490">WhatsApp</a>
+<br>
+Rondônia Clean • Higienização Profissional
+</small>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/5569992315490?text=Olá,%20quero%20um%20orçamento%20para%20limpeza%20de%20estofados">
+💬 ORÇAMENTO GRÁTIS
+</a>
+
+<script>
+const sliders = document.querySelectorAll('.slider');
+
+sliders.forEach(slider => {
+const slides = slider.querySelectorAll('.slide');
+let index = 0;
+
+setInterval(() => {
+slides[index].classList.remove('active');
+index = (index + 1) % slides.length;
+slides[index].classList.add('active');
+}, 3000);
+});
+</script>
+
+</body>
+</html>
