@@ -10,9 +10,6 @@
   <style>
     :root{
       --primary:#20bf63;
-      --primary-hover:#16984d;
-      --primary-focus:rgba(32,191,99,.22);
-      --primary-inverse:#fff;
       --navy:#061a3a;
       --blue:#123c8c;
       --blue-2:#1d63d8;
@@ -26,10 +23,7 @@
       --radius:30px;
     }
 
-    *{
-      box-sizing:border-box;
-      scroll-behavior:smooth;
-    }
+    *{box-sizing:border-box;scroll-behavior:smooth}
 
     body{
       margin:0;
@@ -48,10 +42,6 @@
       font-size:.9rem;
       font-weight:850;
       text-align:center;
-    }
-
-    .topbar strong{
-      color:#fff;
     }
 
     nav.container-fluid{
@@ -98,41 +88,30 @@
       box-shadow:0 12px 24px rgba(32,191,99,.28);
     }
 
-    main.container{
-      padding-top:3.2rem;
-      padding-bottom:1rem;
-    }
+    main.container{padding-top:3.2rem;padding-bottom:1rem}
+    .grid{gap:2.1rem;align-items:center}
 
-    .grid{
-      gap:2.1rem;
-      align-items:center;
-    }
-
-    .eyebrow{
+    .eyebrow,.city-seal{
       display:inline-flex;
       align-items:center;
       gap:.45rem;
       margin-bottom:1rem;
       padding:.46rem .8rem;
       border-radius:999px;
-      background:#e9fbff;
-      border:1px solid rgba(25,183,216,.22);
-      color:#0b6d83;
       font-size:.84rem;
       font-weight:950;
     }
 
+    .eyebrow{
+      background:#e9fbff;
+      border:1px solid rgba(25,183,216,.22);
+      color:#0b6d83;
+    }
+
     .city-seal{
-      display:inline-flex;
-      align-items:center;
-      gap:.5rem;
       margin-left:.5rem;
-      padding:.46rem .8rem;
-      border-radius:999px;
       background:linear-gradient(135deg,#123c8c,#19b7d8);
       color:#fff;
-      font-size:.84rem;
-      font-weight:950;
       box-shadow:0 12px 26px rgba(18,60,140,.18);
     }
 
@@ -158,25 +137,10 @@
       color:var(--navy);
     }
 
-    h3{
-      color:var(--blue);
-      font-weight:800;
-    }
-
-    p{
-      font-size:1.06rem;
-      line-height:1.7;
-      color:var(--muted);
-    }
-
-    .hero-copy{
-      max-width:770px;
-    }
-
-    .hero-copy > p{
-      font-size:1.15rem;
-      max-width:690px;
-    }
+    h3{color:var(--blue);font-weight:800}
+    p{font-size:1.06rem;line-height:1.7;color:var(--muted)}
+    .hero-copy{max-width:770px}
+    .hero-copy > p{font-size:1.15rem;max-width:690px}
 
     .cta-row{
       display:flex;
@@ -220,7 +184,6 @@
     }
 
     .hero-card{
-      position:relative;
       background:linear-gradient(180deg,#ffffff,#f8fdff);
       border:1px solid rgba(13,47,104,.10);
       border-radius:var(--radius);
@@ -230,17 +193,18 @@
     }
 
     .logo-panel{
-      background:linear-gradient(180deg,#fff,#f5fcff);
-      border:1px solid var(--line);
-      border-radius:24px;
-      padding:1.1rem;
+      background:#fff;
+      border:none;
+      box-shadow:none;
+      padding:.5rem;
       margin-bottom:1rem;
       text-align:center;
     }
 
     .logo-img{
       display:block;
-      max-width:min(320px,82%);
+      max-width:240px;
+      width:100%;
       margin:0 auto;
       object-fit:contain;
       filter:drop-shadow(0 12px 20px rgba(18,60,140,.12));
@@ -253,34 +217,16 @@
       font-weight:800;
     }
 
-    .premium-seal{
-      position:absolute;
-      right:22px;
-      top:22px;
-      background:linear-gradient(135deg,var(--navy),var(--blue));
-      color:#fff;
-      border-radius:999px;
-      padding:.42rem .72rem;
-      font-size:.78rem;
-      font-weight:950;
-      box-shadow:0 14px 28px rgba(8,27,61,.20);
-    }
+    figure{margin:0}
 
-    figure{
-      margin:0;
-    }
-
-    figure img,
-    .before-after img{
+    figure img,.before-after img{
       width:100%;
       border-radius:22px;
       object-fit:cover;
       box-shadow:0 18px 40px rgba(8,27,61,.12);
     }
 
-    figure img{
-      max-height:410px;
-    }
+    figure img{max-height:410px}
 
     figcaption{
       text-align:center;
@@ -289,9 +235,25 @@
       color:#718297;
     }
 
-    .section{
-      padding:4rem 0;
+    .result-badges{
+      margin-top:1rem;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:.6rem;
     }
+
+    .result-badges span{
+      background:#f3fbff;
+      border:1px solid #dce9f4;
+      color:#123c8c;
+      padding:.55rem .85rem;
+      border-radius:999px;
+      font-weight:800;
+      font-size:.88rem;
+    }
+
+    .section{padding:4rem 0}
 
     .section-head{
       text-align:center;
@@ -305,14 +267,22 @@
       gap:1rem;
     }
 
-    .card,
-    .mini,
-    details{
+    .card,.mini,details{
       background:rgba(255,255,255,.92);
       border:1px solid rgba(13,47,104,.10);
       border-radius:24px;
       padding:1.25rem;
       box-shadow:0 14px 36px rgba(8,27,61,.07);
+    }
+
+    .card footer{
+      background:linear-gradient(135deg,#f5fbff,#eef9ff);
+      color:#123c8c;
+      border:1px solid #dce9f4;
+      padding:14px 18px;
+      margin-top:18px;
+      border-radius:14px;
+      font-weight:800;
     }
 
     .icon{
@@ -332,9 +302,7 @@
       gap:1rem;
     }
 
-    .photo{
-      position:relative;
-    }
+    .photo{position:relative}
 
     .label{
       position:absolute;
@@ -348,18 +316,10 @@
       font-size:.82rem;
     }
 
-    .label.after{
-      background:linear-gradient(135deg,var(--green),var(--green-2));
-    }
+    .label.after{background:linear-gradient(135deg,var(--green),var(--green-2))}
 
-    .process{
-      counter-reset:step;
-    }
-
-    .step{
-      position:relative;
-      padding-left:3.6rem;
-    }
+    .process{counter-reset:step}
+    .step{position:relative;padding-left:3.6rem}
 
     .step::before{
       counter-increment:step;
@@ -385,20 +345,10 @@
       box-shadow:0 24px 60px rgba(8,27,61,.22);
     }
 
-    .guarantee h2,
-    .guarantee h3,
-    .guarantee p{
-      color:#fff;
-    }
+    .guarantee h2,.guarantee h3,.guarantee p{color:#fff}
 
-    details{
-      margin-bottom:.8rem;
-    }
-
-    summary{
-      font-weight:900;
-      color:var(--blue);
-    }
+    details{margin-bottom:.8rem}
+    summary{font-weight:900;color:var(--blue)}
 
     section[aria-label="Subscribe example"]{
       padding:4rem 0;
@@ -471,55 +421,16 @@
     }
 
     @media(max-width:768px){
-      .topbar{
-        font-size:.82rem;
-      }
-
-      nav ul:last-child li:not(:last-child){
-        display:none;
-      }
-
-      main.container{
-        padding-top:2rem;
-      }
-
-      .city-seal{
-        margin:.45rem 0 0 0;
-      }
-
-      .cta-row a{
-        width:100%;
-      }
-
-      .hero-card{
-        padding:.75rem;
-      }
-
-      .premium-seal{
-        position:static;
-        display:inline-block;
-        margin-bottom:.7rem;
-      }
-
-      .section{
-        padding:3rem 0;
-      }
-
-      .floating-wa{
-        width:60px;
-        height:60px;
-        right:16px;
-        bottom:16px;
-      }
-
-      .floating-wa svg{
-        width:30px;
-        height:30px;
-      }
-
-      .logo-img{
-        max-width:235px;
-      }
+      .topbar{font-size:.82rem}
+      nav ul:last-child li:not(:last-child){display:none}
+      main.container{padding-top:2rem}
+      .city-seal{margin:.45rem 0 0 0}
+      .cta-row a{width:100%}
+      .hero-card{padding:.75rem}
+      .section{padding:3rem 0}
+      .floating-wa{width:60px;height:60px;right:16px;bottom:16px}
+      .floating-wa svg{width:30px;height:30px}
+      .logo-img{max-width:220px}
     }
   </style>
 </head>
@@ -530,17 +441,11 @@
   </div>
 
   <nav class="container-fluid">
-    <ul>
-      <li><strong>Rondônia Clean</strong></li>
-    </ul>
+    <ul><li><strong>Rondônia Clean</strong></li></ul>
     <ul>
       <li><a href="#servicos">Serviços</a></li>
       <li><a href="#depoimentos">Depoimentos</a></li>
-      <li>
-        <a href="https://wa.me/5569992315490?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20da%20Rond%C3%B4nia%20Clean" role="button">
-          WhatsApp
-        </a>
-      </li>
+      <li><a href="https://wa.me/5569992315490?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20da%20Rond%C3%B4nia%20Clean" role="button">WhatsApp</a></li>
     </ul>
   </nav>
 
@@ -551,25 +456,14 @@
         <span class="city-seal">📍 Toda Porto Velho</span>
 
         <hgroup>
-          <h1>
-            Seu estofado limpo, cheiroso e com
-            <span class="accent">aparência renovada</span>.
-          </h1>
-          <h3>
-            Removemos sujeira, odores, ácaros e impurezas profundas de sofás,
-            colchões, cadeiras e poltronas.
-          </h3>
+          <h1>Seu estofado limpo, cheiroso e com <span class="accent">aparência renovada</span>.</h1>
+          <h3>Removemos sujeira, odores, ácaros e impurezas profundas de sofás, colchões, cadeiras e poltronas.</h3>
         </hgroup>
 
-        <p>
-          A Rondônia Clean entrega um serviço caprichado para quem quer uma casa
-          mais bonita, confortável e saudável, com atendimento rápido em Porto Velho.
-        </p>
+        <p>A Rondônia Clean entrega um serviço caprichado para quem quer uma casa mais bonita, confortável e saudável, com atendimento rápido em Porto Velho.</p>
 
         <div class="cta-row">
-          <a class="btn-wa" href="https://wa.me/5569992315490?text=Ol%C3%A1%2C%20quero%20meu%20or%C3%A7amento%20agora%20para%20higieniza%C3%A7%C3%A3o%20de%20estofados" role="button">
-            Quero orçamento no WhatsApp
-          </a>
+          <a class="btn-wa" href="https://wa.me/5569992315490?text=Ol%C3%A1%2C%20quero%20meu%20or%C3%A7amento%20agora%20para%20higieniza%C3%A7%C3%A3o%20de%20estofados" role="button">Quero orçamento no WhatsApp</a>
         </div>
 
         <div class="trust-row">
@@ -580,8 +474,6 @@
       </section>
 
       <section class="hero-card">
-        <span class="premium-seal">Premium Clean</span>
-
         <div class="logo-panel">
           <img class="logo-img" src="logo.png" alt="Logo Rondônia Clean">
           <small>Limpeza, confiança e resultado para seu estofado</small>
@@ -591,6 +483,12 @@
           <img src="sofa1.jpg" alt="Sofá limpo após higienização profissional">
           <figcaption>Higienização para deixar seu ambiente mais limpo e agradável</figcaption>
         </figure>
+
+        <div class="result-badges">
+          <span>✓ Remove odores</span>
+          <span>✓ Reduz ácaros</span>
+          <span>✓ Aparência renovada</span>
+        </div>
       </section>
     </div>
 
@@ -600,10 +498,7 @@
           <h2>Resultado que aparece no tecido</h2>
           <h3>Antes e depois com mais limpeza, cor e sensação de cuidado</h3>
         </hgroup>
-        <p>
-          Uma boa higienização não é só perfume: é remoção de sujeira acumulada
-          e melhoria real na aparência do estofado.
-        </p>
+        <p>Uma boa higienização não é só perfume: é remoção de sujeira acumulada e melhoria real na aparência do estofado.</p>
       </div>
 
       <div class="before-after">
@@ -727,17 +622,17 @@
       <div class="cards">
         <article class="card">
           <p>“Meu sofá ficou com outra aparência. Atendimento rápido e muito cuidadoso.”</p>
-          <footer>★★★★★ Ana Paula — Bairro Embratel</footer>
+          <footer>⭐⭐⭐⭐⭐ Ana Paula • Embratel</footer>
         </article>
 
         <article class="card">
           <p>“Saiu o cheiro ruim do colchão e a casa ficou muito mais agradável.”</p>
-          <footer>★★★★★ Marcos Silva — Zona Sul</footer>
+          <footer>⭐⭐⭐⭐⭐ Marcos Silva • Zona Sul</footer>
         </article>
 
         <article class="card">
           <p>“Serviço caprichado. Chamei pelo WhatsApp e fui atendida muito bem.”</p>
-          <footer>★★★★★ Juliana Costa — Nova Porto Velho</footer>
+          <footer>⭐⭐⭐⭐⭐ Juliana Costa • Nova Porto Velho</footer>
         </article>
       </div>
     </section>
@@ -748,11 +643,7 @@
           <h2>Garantia de atendimento profissional</h2>
           <h3>Avaliação honesta antes de começar</h3>
         </hgroup>
-        <p>
-          A Rondônia Clean avalia o estado do estofado, explica as possibilidades de limpeza
-          e executa o serviço com cuidado. Manchas antigas podem variar conforme o tecido,
-          produto anterior usado e tempo de exposição.
-        </p>
+        <p>A Rondônia Clean avalia o estado do estofado, explica as possibilidades de limpeza e executa o serviço com cuidado. Manchas antigas podem variar conforme o tecido, produto anterior usado e tempo de exposição.</p>
       </article>
     </section>
 
@@ -805,21 +696,14 @@
     </div>
   </section>
 
-  <a
-    class="floating-wa"
-    href="https://wa.me/5569992315490?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20da%20Rond%C3%B4nia%20Clean"
-    target="_blank"
-    aria-label="Chamar no WhatsApp"
-  >
+  <a class="floating-wa" href="https://wa.me/5569992315490?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20da%20Rond%C3%B4nia%20Clean" target="_blank" aria-label="Chamar no WhatsApp">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
       <path d="M20.52 3.48A11.82 11.82 0 0 0 12.04 0C5.5 0 .16 5.34.16 11.88c0 2.1.55 4.16 1.6 5.98L0 24l6.32-1.66a11.85 11.85 0 0 0 5.72 1.46h.01c6.54 0 11.88-5.34 11.88-11.88 0-3.17-1.23-6.15-3.41-8.44ZM12.05 21.8a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.75.98 1-3.65-.24-.38a9.83 9.83 0 0 1-1.5-5.28c0-5.44 4.43-9.87 9.88-9.87 2.63 0 5.1 1.02 6.96 2.9a9.78 9.78 0 0 1 2.89 6.97c0 5.45-4.43 9.88-9.85 9.88Zm5.41-7.4c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.47-2.4-1.5-.89-.79-1.49-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.08-.8.38-.27.3-1.05 1.03-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.12 3.23 5.13 4.54.72.31 1.28.5 1.72.64.72.23 1.37.2 1.89.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/>
     </svg>
   </a>
 
   <footer class="container">
-    <small>
-      <a href="#">Rondônia Clean — Porto Velho</a>
-    </small>
+    <small><a href="#">Rondônia Clean — Porto Velho</a></small>
   </footer>
 </body>
 </html>
