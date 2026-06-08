@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Rondônia Clean | Higienização Profissional de Estofados em Porto Velho</title>
-  <meta name="description" content="Higienização profissional de sofás, colchões, cadeiras e poltronas em Porto Velho. Remova sujeira, ácaros, odores e manchas com atendimento em domicílio.">
+  <meta name="description" content="Higienização profissional de sofás, colchões e cadeiras estofadas em Porto Velho. Remova sujeira, ácaros, odores e manchas com atendimento em domicílio.">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
 
   <style>
@@ -20,7 +20,6 @@
       --muted:#5d7187;
       --line:#dce9f4;
       --shadow:0 24px 60px rgba(13,47,104,.14);
-      --radius:30px;
     }
 
     *{box-sizing:border-box;scroll-behavior:smooth}
@@ -88,10 +87,17 @@
       box-shadow:0 12px 24px rgba(32,191,99,.28);
     }
 
-    main.container{padding-top:3.2rem;padding-bottom:1rem}
-    .grid{gap:2.1rem;align-items:center}
+    main.container{
+      padding-top:3.2rem;
+      padding-bottom:1rem;
+    }
 
-    .eyebrow,.city-seal{
+    .grid{
+      gap:2.1rem;
+      align-items:center;
+    }
+
+    .eyebrow{
       display:inline-flex;
       align-items:center;
       gap:.45rem;
@@ -100,19 +106,9 @@
       border-radius:999px;
       font-size:.84rem;
       font-weight:950;
-    }
-
-    .eyebrow{
       background:#e9fbff;
       border:1px solid rgba(25,183,216,.22);
       color:#0b6d83;
-    }
-
-    .city-seal{
-      margin-left:.5rem;
-      background:linear-gradient(135deg,#123c8c,#19b7d8);
-      color:#fff;
-      box-shadow:0 12px 26px rgba(18,60,140,.18);
     }
 
     h1{
@@ -137,10 +133,25 @@
       color:var(--navy);
     }
 
-    h3{color:var(--blue);font-weight:800}
-    p{font-size:1.06rem;line-height:1.7;color:var(--muted)}
-    .hero-copy{max-width:770px}
-    .hero-copy > p{font-size:1.15rem;max-width:690px}
+    h3{
+      color:var(--blue);
+      font-weight:800;
+    }
+
+    p{
+      font-size:1.06rem;
+      line-height:1.7;
+      color:var(--muted);
+    }
+
+    .hero-copy{
+      max-width:770px;
+    }
+
+    .hero-copy > p{
+      font-size:1.15rem;
+      max-width:690px;
+    }
 
     .cta-row{
       display:flex;
@@ -150,7 +161,8 @@
       margin:1.6rem 0 1rem;
     }
 
-    .btn-wa,.btn-secondary{
+    .btn-wa,
+    .btn-secondary{
       display:inline-flex;
       align-items:center;
       justify-content:center;
@@ -194,54 +206,29 @@
     }
 
     .hero-card{
-      background:linear-gradient(180deg,#ffffff,#f8fdff);
-      border:1px solid rgba(13,47,104,.10);
-      border-radius:var(--radius);
-      padding:1rem;
-      box-shadow:var(--shadow);
-      overflow:hidden;
-    }
-
-    .logo-panel{
-      background:#fff;
+      background:transparent;
       border:none;
       box-shadow:none;
-      padding:.5rem;
-      margin-bottom:1rem;
-      text-align:center;
+      padding:0;
     }
 
-    .logo-img{
-      display:block;
-      max-width:240px;
+    .hero-result img{
       width:100%;
-      margin:0 auto;
-      object-fit:contain;
-      filter:drop-shadow(0 12px 20px rgba(18,60,140,.12));
-    }
-
-    .logo-panel small{
+      border-radius:24px;
       display:block;
-      margin-top:.55rem;
-      color:var(--muted);
-      font-weight:800;
-    }
-
-    figure{margin:0}
-
-    figure img{
-      width:100%;
-      border-radius:22px;
       object-fit:cover;
-      box-shadow:0 18px 40px rgba(8,27,61,.12);
-      max-height:410px;
+      box-shadow:0 20px 50px rgba(0,0,0,.12);
     }
 
-    figcaption{
+    .hero-result figcaption{
       text-align:center;
-      margin-top:.6rem;
-      font-size:.82rem;
-      color:#718297;
+      margin-top:.85rem;
+      font-size:.9rem;
+      color:#5d7187;
+    }
+
+    figure{
+      margin:0;
     }
 
     .result-badges{
@@ -253,7 +240,7 @@
     }
 
     .result-badges span{
-      background:#f3fbff;
+      background:#fff;
       border:1px solid #dce9f4;
       color:#123c8c;
       padding:.55rem .85rem;
@@ -262,7 +249,9 @@
       font-size:.88rem;
     }
 
-    .section{padding:4rem 0}
+    .section{
+      padding:4rem 0;
+    }
 
     .section-head{
       text-align:center;
@@ -276,7 +265,9 @@
       gap:1rem;
     }
 
-    .card,.mini,details{
+    .card,
+    .mini,
+    details{
       background:rgba(255,255,255,.92);
       border:1px solid rgba(13,47,104,.10);
       border-radius:24px;
@@ -342,8 +333,14 @@
       margin:0;
     }
 
-    .process{counter-reset:step}
-    .step{position:relative;padding-left:3.6rem}
+    .process{
+      counter-reset:step;
+    }
+
+    .step{
+      position:relative;
+      padding-left:3.6rem;
+    }
 
     .step::before{
       counter-increment:step;
@@ -369,10 +366,20 @@
       box-shadow:0 24px 60px rgba(8,27,61,.22);
     }
 
-    .guarantee h2,.guarantee h3,.guarantee p{color:#fff}
+    .guarantee h2,
+    .guarantee h3,
+    .guarantee p{
+      color:#fff;
+    }
 
-    details{margin-bottom:.8rem}
-    summary{font-weight:900;color:var(--blue)}
+    details{
+      margin-bottom:.8rem;
+    }
+
+    summary{
+      font-weight:900;
+      color:var(--blue);
+    }
 
     section[aria-label="Subscribe example"]{
       padding:4rem 0;
@@ -445,18 +452,45 @@
     }
 
     @media(max-width:768px){
-      .topbar{font-size:.82rem}
-      nav ul:last-child li:not(:last-child){display:none}
-      main.container{padding-top:2rem}
-      .city-seal{margin:.45rem 0 0 0}
-      .cta-row a{width:100%}
-      .hero-card{padding:.75rem}
-      .section{padding:3rem 0}
-      .gallery-grid{grid-template-columns:1fr}
-      .gallery-grid img{height:auto}
-      .floating-wa{width:60px;height:60px;right:16px;bottom:16px}
-      .floating-wa svg{width:30px;height:30px}
-      .logo-img{max-width:220px}
+      .topbar{
+        font-size:.82rem;
+      }
+
+      nav ul:last-child li:not(:last-child){
+        display:none;
+      }
+
+      main.container{
+        padding-top:2rem;
+      }
+
+      .cta-row a{
+        width:100%;
+      }
+
+      .section{
+        padding:3rem 0;
+      }
+
+      .gallery-grid{
+        grid-template-columns:1fr;
+      }
+
+      .gallery-grid img{
+        height:auto;
+      }
+
+      .floating-wa{
+        width:60px;
+        height:60px;
+        right:16px;
+        bottom:16px;
+      }
+
+      .floating-wa svg{
+        width:30px;
+        height:30px;
+      }
     }
   </style>
 </head>
@@ -467,11 +501,17 @@
   </div>
 
   <nav class="container-fluid">
-    <ul><li><strong>Rondônia Clean</strong></li></ul>
+    <ul>
+      <li><strong>Rondônia Clean</strong></li>
+    </ul>
     <ul>
       <li><a href="#servicos">Serviços</a></li>
       <li><a href="#depoimentos">Depoimentos</a></li>
-      <li><a href="https://wa.me/5569992315490?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20da%20Rond%C3%B4nia%20Clean" role="button">WhatsApp</a></li>
+      <li>
+        <a href="https://wa.me/5569992315490?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20da%20Rond%C3%B4nia%20Clean" role="button">
+          WhatsApp
+        </a>
+      </li>
     </ul>
   </nav>
 
@@ -479,18 +519,31 @@
     <div class="grid">
       <section class="hero-copy">
         <span class="eyebrow">✨ Higienização profissional em domicílio</span>
-        <span class="city-seal">📍 Toda Porto Velho</span>
 
         <hgroup>
-          <h1>Seu estofado limpo, cheiroso e com <span class="accent">aparência renovada</span>.</h1>
-          <h3>Removemos sujeira, odores, ácaros e impurezas profundas de sofás, colchões, cadeiras e poltronas.</h3>
+          <h1>
+            Seu estofado limpo, cheiroso e com
+            <span class="accent">aparência renovada</span>.
+          </h1>
+          <h3>
+            Removemos sujeira, odores, ácaros e impurezas profundas de sofás,
+            colchões e cadeiras estofadas.
+          </h3>
         </hgroup>
 
-        <p>A Rondônia Clean entrega um serviço caprichado para quem quer uma casa mais bonita, confortável e saudável, com atendimento rápido em Porto Velho.</p>
+        <p>
+          A Rondônia Clean entrega um serviço caprichado para quem quer uma casa
+          mais bonita, confortável e saudável, com atendimento rápido em Porto Velho.
+        </p>
 
         <div class="cta-row">
-          <a class="btn-wa" href="https://wa.me/5569992315490?text=Ol%C3%A1%2C%20quero%20meu%20or%C3%A7amento%20agora%20para%20higieniza%C3%A7%C3%A3o%20de%20estofados" role="button">Quero orçamento no WhatsApp</a>
-          <a class="btn-secondary" href="#resultados" role="button">Ver resultados</a>
+          <a class="btn-wa" href="https://wa.me/5569992315490?text=Ol%C3%A1%2C%20quero%20meu%20or%C3%A7amento%20agora%20para%20higieniza%C3%A7%C3%A3o%20de%20estofados" role="button">
+            Quero orçamento no WhatsApp
+          </a>
+
+          <a class="btn-secondary" href="#resultados" role="button">
+            Ver resultados
+          </a>
         </div>
 
         <div class="trust-row">
@@ -501,14 +554,9 @@
       </section>
 
       <section class="hero-card">
-        <div class="logo-panel">
-          <img class="logo-img" src="logo.png" alt="Logo Rondônia Clean">
-          <small>Limpeza, confiança e resultado para seu estofado</small>
-        </div>
-
-        <figure>
-          <img src="sofa1.jpg" alt="Sofá limpo após higienização profissional">
-          <figcaption>Higienização para deixar seu ambiente mais limpo e agradável</figcaption>
+        <figure class="hero-result">
+          <img src="sofa1.jpg" alt="Antes e depois da higienização de sofá">
+          <figcaption>Resultado real de higienização profissional</figcaption>
         </figure>
 
         <div class="result-badges">
@@ -561,7 +609,10 @@
           <h3>Veja alguns serviços realizados pela Rondônia Clean</h3>
         </hgroup>
 
-        <p>Cada estofado recebe uma avaliação individual para garantir o melhor resultado possível na limpeza e higienização.</p>
+        <p>
+          Cada estofado recebe uma avaliação individual para garantir o melhor
+          resultado possível na limpeza e higienização.
+        </p>
       </div>
 
       <div class="gallery-grid">
@@ -581,13 +632,13 @@
         </figure>
 
         <figure>
-          <img src="poltrona1.jpg" alt="Poltrona higienizada">
-          <figcaption>Poltrona renovada</figcaption>
+          <img src="poltrona1.jpg" alt="Cadeiras estofadas higienizadas">
+          <figcaption>Cadeiras estofadas renovadas</figcaption>
         </figure>
 
         <figure>
-          <img src="poltrona2.jpg" alt="Limpeza de poltrona">
-          <figcaption>Higienização de poltrona</figcaption>
+          <img src="poltrona2.jpg" alt="Limpeza de cadeiras estofadas">
+          <figcaption>Higienização de cadeiras</figcaption>
         </figure>
 
         <figure>
@@ -607,7 +658,7 @@
 
         <figure>
           <img src="cadeira1.jpg" alt="Cadeira higienizada">
-          <figcaption>Limpeza de cadeiras</figcaption>
+          <figcaption>Limpeza de cadeira estofada</figcaption>
         </figure>
       </div>
     </section>
@@ -632,8 +683,8 @@
         </article>
 
         <article class="card">
-          <h3>Cadeiras e poltronas</h3>
-          <p>Ideal para salas, escritórios, clínicas, recepções e salões.</p>
+          <h3>Cadeiras estofadas</h3>
+          <p>Limpeza e higienização de cadeiras residenciais, comerciais e corporativas.</p>
         </article>
 
         <article class="card">
@@ -706,7 +757,11 @@
           <h2>Garantia de atendimento profissional</h2>
           <h3>Avaliação honesta antes de começar</h3>
         </hgroup>
-        <p>A Rondônia Clean avalia o estado do estofado, explica as possibilidades de limpeza e executa o serviço com cuidado. Manchas antigas podem variar conforme o tecido, produto anterior usado e tempo de exposição.</p>
+        <p>
+          A Rondônia Clean avalia o estado do estofado, explica as possibilidades
+          de limpeza e executa o serviço com cuidado. Manchas antigas podem variar
+          conforme o tecido, produto anterior usado e tempo de exposição.
+        </p>
       </article>
     </section>
 
