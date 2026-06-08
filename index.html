@@ -3,188 +3,334 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Rondônia Clean | Limpeza Profissional de Estofados</title>
-  <meta name="description" content="Limpeza e higienização profissional de sofás, colchões, cadeiras, camas e poltronas em Rondônia. Solicite seu orçamento pelo WhatsApp.">
+  <title>Rondônia Clean | Higienização Profissional de Estofados em Porto Velho</title>
+  <meta name="description" content="Higienização profissional de sofás, colchões, cadeiras e poltronas em Porto Velho. Remova sujeira, ácaros, odores e manchas com atendimento em domicílio.">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
 
   <style>
     :root{
-      --primary:#25D366;
-      --brand-blue:#123C8C;
-      --brand-cyan:#16B6D9;
-      --brand-green:#25D366;
-      --ink:#0B1437;
-      --muted:#53657D;
+      --primary:#20bf63;
+      --primary-hover:#16984d;
+      --primary-focus:rgba(32,191,99,.22);
+      --primary-inverse:#fff;
+      --navy:#061a3a;
+      --blue:#123c8c;
+      --blue-2:#1d63d8;
+      --cyan:#19b7d8;
+      --green:#20bf63;
+      --green-2:#60d828;
+      --text:#102033;
+      --muted:#5d7187;
+      --line:#dce9f4;
+      --white:#fff;
+      --shadow:0 24px 60px rgba(13,47,104,.14);
+      --radius:30px;
     }
 
-    *{scroll-behavior:smooth}
+    *{
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
 
     body{
       margin:0;
-      background:linear-gradient(180deg,#EAFBFF 0%,#FFFFFF 42%,#F6FFF9 100%);
-      color:var(--ink);
-      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 10% 0%,rgba(25,183,216,.22),transparent 32rem),
+        radial-gradient(circle at 90% 12%,rgba(32,191,99,.14),transparent 26rem),
+        linear-gradient(180deg,#f3fcff 0%,#fff 46%,#f8fff9 100%);
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    }
+
+    .topbar{
+      background:linear-gradient(90deg,var(--navy),var(--blue));
+      color:#fff;
+      padding:.45rem 1rem;
+      font-size:.9rem;
+      font-weight:800;
+    }
+
+    .topbar .wrap{
+      max-width:1180px;
+      margin:auto;
+      display:flex;
+      justify-content:space-between;
+      gap:1rem;
+      align-items:center;
+    }
+
+    .topbar a{
+      color:#fff;
+      text-decoration:none;
     }
 
     nav.container-fluid{
       position:sticky;
       top:0;
-      z-index:20;
-      background:rgba(255,255,255,.90);
-      backdrop-filter:blur(14px);
-      border-bottom:1px solid rgba(18,60,140,.10);
-      box-shadow:0 10px 30px rgba(11,20,55,.06);
-      padding:.7rem 1.1rem;
+      z-index:40;
+      background:rgba(255,255,255,.94);
+      backdrop-filter:blur(16px);
+      border-bottom:1px solid rgba(13,47,104,.10);
+      box-shadow:0 10px 28px rgba(8,27,61,.06);
+      padding:.65rem clamp(1rem,3vw,2rem);
     }
 
     nav strong{
-      color:var(--brand-blue);
-      font-size:1.1rem;
-      letter-spacing:-.02em;
+      display:flex;
+      align-items:center;
+      gap:.55rem;
+      color:var(--blue);
+      font-weight:950;
+      letter-spacing:-.035em;
+    }
+
+    nav strong::before{
+      content:"";
+      width:14px;
+      height:14px;
+      border-radius:99px;
+      background:linear-gradient(135deg,var(--cyan),var(--green));
+      box-shadow:0 0 0 7px rgba(32,191,99,.10);
     }
 
     nav a{
-      color:var(--brand-blue);
-      font-weight:700;
+      font-weight:800;
+      color:var(--blue);
       text-decoration:none;
     }
 
     nav a[role=button]{
-      background:var(--brand-green);
-      border-color:var(--brand-green);
+      background:linear-gradient(135deg,var(--green),#35d979);
+      border:0;
       color:#fff;
       border-radius:999px;
-      padding:.65rem 1rem;
-      box-shadow:0 10px 22px rgba(37,211,102,.28);
+      padding:.68rem 1.05rem;
+      box-shadow:0 12px 24px rgba(32,191,99,.28);
     }
 
     main.container{
-      padding-top:3.4rem;
-      padding-bottom:2rem;
+      padding-top:3.2rem;
+      padding-bottom:1rem;
     }
 
     .grid{
+      gap:2.1rem;
       align-items:center;
-      gap:2.2rem;
     }
 
-    .hero-badge{
+    .eyebrow{
       display:inline-flex;
-      gap:.45rem;
       align-items:center;
-      background:#DFF8FF;
-      color:#0B6090;
-      border:1px solid rgba(22,182,217,.25);
-      padding:.45rem .8rem;
-      border-radius:999px;
-      font-size:.86rem;
-      font-weight:800;
+      gap:.45rem;
       margin-bottom:1rem;
+      padding:.46rem .8rem;
+      border-radius:999px;
+      background:#e9fbff;
+      border:1px solid rgba(25,183,216,.22);
+      color:#0b6d83;
+      font-size:.84rem;
+      font-weight:950;
+    }
+
+    .city-seal{
+      display:inline-flex;
+      align-items:center;
+      gap:.5rem;
+      margin-left:.5rem;
+      padding:.46rem .8rem;
+      border-radius:999px;
+      background:linear-gradient(135deg,#123c8c,#19b7d8);
+      color:#fff;
+      font-size:.84rem;
+      font-weight:950;
+      box-shadow:0 12px 26px rgba(18,60,140,.18);
     }
 
     h1{
-      font-size:clamp(2.35rem,5.5vw,4.9rem);
+      font-size:clamp(2.25rem,5vw,4.8rem);
       line-height:1.02;
-      letter-spacing:-.06em;
+      letter-spacing:-.065em;
+      color:var(--navy);
       margin-bottom:1rem;
-      color:var(--ink);
     }
 
-    h1 span{
-      display:block;
-      background:linear-gradient(90deg,#123C8C,#2364E8,#25D366);
+    h1 .accent{
+      background:linear-gradient(90deg,var(--blue),var(--blue-2),var(--green));
       -webkit-background-clip:text;
       background-clip:text;
       color:transparent;
     }
 
     h2{
-      letter-spacing:-.04em;
-      color:var(--ink);
+      font-size:clamp(1.85rem,3vw,3rem);
+      line-height:1.08;
+      letter-spacing:-.045em;
+      color:var(--navy);
     }
 
     h3{
-      color:var(--brand-blue);
+      color:var(--blue);
+      font-weight:800;
     }
 
     p{
-      color:var(--muted);
       font-size:1.06rem;
+      line-height:1.7;
+      color:var(--muted);
     }
 
     .hero-copy{
-      max-width:740px;
+      max-width:770px;
+    }
+
+    .hero-copy > p{
+      font-size:1.15rem;
+      max-width:690px;
     }
 
     .cta-row{
       display:flex;
-      gap:.8rem;
       flex-wrap:wrap;
+      gap:.85rem;
       align-items:center;
-      margin-top:1.5rem;
+      margin:1.6rem 0 1rem;
     }
 
-    .whatsapp{
-      background:linear-gradient(135deg,#25D366,#18B455);
-      border:none;
+    .btn-wa,
+    .btn-light{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
       border-radius:999px;
+      font-weight:950;
+      text-decoration:none;
+      min-height:52px;
+      padding:.9rem 1.25rem;
+    }
+
+    .btn-wa{
+      background:linear-gradient(135deg,var(--green),#37d979);
       color:#fff;
-      font-weight:900;
+      box-shadow:0 18px 38px rgba(32,191,99,.30);
+      border:0;
       text-transform:uppercase;
-      box-shadow:0 16px 38px rgba(37,211,102,.32);
-      padding:.95rem 1.35rem;
     }
 
-    .secondary{
-      border-radius:999px;
+    .btn-light{
       background:#fff;
-      color:var(--brand-blue);
-      border:1px solid rgba(18,60,140,.18);
+      color:var(--blue);
+      border:1px solid rgba(13,47,104,.14);
+    }
+
+    .trust-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:.65rem;
+      margin-top:1.25rem;
+    }
+
+    .trust-row span{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:999px;
+      padding:.45rem .75rem;
+      color:#36516a;
       font-weight:800;
+      font-size:.9rem;
     }
 
     .hero-card{
-      background:rgba(255,255,255,.82);
-      border:1px solid rgba(18,60,140,.10);
-      border-radius:34px;
+      position:relative;
+      background:linear-gradient(180deg,#ffffff,#f8fdff);
+      border:1px solid rgba(13,47,104,.10);
+      border-radius:var(--radius);
       padding:1rem;
-      box-shadow:0 30px 70px rgba(18,60,140,.14);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    .hero-card::before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:linear-gradient(135deg,rgba(25,183,216,.35),transparent 35%,rgba(32,191,99,.28));
+      z-index:-1;
+      border-radius:inherit;
+    }
+
+    .logo-panel{
+      background:linear-gradient(180deg,#fff,#f5fcff);
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:1.1rem;
+      margin-bottom:1rem;
+      text-align:center;
     }
 
     .logo-img{
       display:block;
-      max-width:260px;
-      margin:0 auto 1.4rem;
+      max-width:min(320px,82%);
+      margin:0 auto;
       object-fit:contain;
+      filter:drop-shadow(0 12px 20px rgba(18,60,140,.12));
+    }
+
+    .logo-panel small{
+      display:block;
+      margin-top:.55rem;
+      color:var(--muted);
+      font-weight:800;
+    }
+
+    .premium-seal{
+      position:absolute;
+      right:22px;
+      top:22px;
+      background:linear-gradient(135deg,var(--navy),var(--blue));
+      color:#fff;
+      border-radius:999px;
+      padding:.42rem .72rem;
+      font-size:.78rem;
+      font-weight:950;
+      box-shadow:0 14px 28px rgba(8,27,61,.20);
+    }
+
+    figure{
+      margin:0;
     }
 
     figure img,
     .before-after img{
       width:100%;
-      border-radius:26px;
+      border-radius:22px;
       object-fit:cover;
-      box-shadow:0 18px 42px rgba(11,20,55,.12);
+      box-shadow:0 18px 40px rgba(8,27,61,.12);
     }
 
     figure img{
-      max-height:420px;
+      max-height:410px;
     }
 
     figcaption{
       text-align:center;
-      color:#7A8AA0;
-      font-size:.8rem;
       margin-top:.6rem;
+      font-size:.82rem;
+      color:#718297;
     }
 
     .section{
-      padding:4.2rem 0;
+      padding:4rem 0;
     }
 
-    .section-title{
+    .section-head{
       text-align:center;
-      max-width:760px;
+      max-width:780px;
       margin:0 auto 2rem;
+    }
+
+    .section-head p{
+      margin-inline:auto;
+      max-width:650px;
     }
 
     .cards{
@@ -193,60 +339,86 @@
       gap:1rem;
     }
 
+    .card,
     .mini,
-    article.card,
     details{
-      background:rgba(255,255,255,.88);
-      border:1px solid rgba(18,60,140,.10);
+      background:rgba(255,255,255,.92);
+      border:1px solid rgba(13,47,104,.10);
       border-radius:24px;
       padding:1.25rem;
-      box-shadow:0 18px 45px rgba(11,20,55,.07);
-    }
-
-    .mini h3{
-      margin-bottom:.45rem;
-      color:var(--brand-blue);
+      box-shadow:0 14px 36px rgba(8,27,61,.07);
     }
 
     .icon{
-      width:48px;
-      height:48px;
-      border-radius:16px;
+      width:46px;
+      height:46px;
+      border-radius:15px;
       display:grid;
       place-items:center;
-      background:linear-gradient(135deg,#E7F8FF,#DFFBEA);
+      background:linear-gradient(135deg,#e8fbff,#e8fff1);
       font-size:1.35rem;
-      margin-bottom:.8rem;
+      margin-bottom:.85rem;
     }
 
     .before-after{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:1.1rem;
+      gap:1rem;
     }
 
-    .photo-wrap{
+    .photo{
       position:relative;
     }
 
     .label{
       position:absolute;
-      left:18px;
-      top:18px;
-      background:rgba(11,20,55,.82);
+      left:16px;
+      top:16px;
+      background:rgba(8,27,61,.86);
       color:#fff;
-      padding:.35rem .8rem;
       border-radius:999px;
+      padding:.35rem .8rem;
       font-weight:900;
-      font-size:.8rem;
+      font-size:.82rem;
+    }
+
+    .label.after{
+      background:linear-gradient(135deg,var(--green),var(--green-2));
+    }
+
+    .process{
+      counter-reset:step;
+    }
+
+    .step{
+      position:relative;
+      padding-left:3.6rem;
+    }
+
+    .step::before{
+      counter-increment:step;
+      content:counter(step);
+      position:absolute;
+      left:1.1rem;
+      top:1.25rem;
+      width:34px;
+      height:34px;
+      border-radius:99px;
+      background:var(--blue);
+      color:#fff;
+      display:grid;
+      place-items:center;
+      font-weight:900;
     }
 
     .guarantee{
-      background:radial-gradient(circle at top left,#29D872 0%,#123C8C 55%,#08142F 100%);
-      border-radius:34px;
+      overflow:hidden;
+      position:relative;
+      background:linear-gradient(135deg,var(--navy),var(--blue) 56%,var(--green));
+      border-radius:32px;
       padding:2rem;
-      color:#fff;
-      box-shadow:0 30px 70px rgba(18,60,140,.25);
+      border:0;
+      box-shadow:0 24px 60px rgba(8,27,61,.22);
     }
 
     .guarantee h2,
@@ -255,225 +427,354 @@
       color:#fff;
     }
 
-    details summary{
-      color:var(--brand-blue);
+    .guarantee p{
+      max-width:860px;
+      color:rgba(255,255,255,.88);
+    }
+
+    details{
+      margin-bottom:.8rem;
+    }
+
+    summary{
       font-weight:900;
+      color:var(--blue);
     }
 
     section[aria-label="Subscribe example"]{
       padding:4rem 0;
-      background:linear-gradient(135deg,#EAFBFF,#EFFFF5);
+      background:linear-gradient(135deg,#eafbff,#effff5);
     }
 
     section[aria-label="Subscribe example"] article{
-      border-radius:34px;
-      border:1px solid rgba(37,211,102,.20);
-      box-shadow:0 26px 62px rgba(37,211,102,.13);
+      border-radius:32px;
+      border:1px solid rgba(32,191,99,.18);
+      box-shadow:0 22px 54px rgba(32,191,99,.12);
     }
 
     input{
       border-radius:16px!important;
-      border-color:rgba(18,60,140,.16)!important;
       background:#fff!important;
+      border-color:rgba(13,47,104,.14)!important;
     }
 
     button{
       border-radius:16px;
-      font-weight:900;
-      background:var(--brand-green);
-      border-color:var(--brand-green);
+      font-weight:950;
+      background:linear-gradient(135deg,var(--green),#37d979);
+      border:0;
+      color:#fff;
     }
 
     .floating-wa{
       position:fixed;
-      right:22px;
-      bottom:22px;
-      z-index:50;
-      background:#25D366;
+      right:20px;
+      bottom:20px;
+      z-index:60;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      background:#25d366;
       color:#fff;
-      border-radius:999px;
-      padding:.9rem 1.15rem;
-      font-weight:900;
       text-decoration:none;
-      box-shadow:0 18px 45px rgba(37,211,102,.35);
+      border-radius:999px;
+      padding:.95rem 1.15rem;
+      font-weight:950;
+      box-shadow:0 18px 44px rgba(37,211,102,.34);
+      animation:pulseWA 2.8s infinite;
+    }
+
+    .floating-wa::before{
+      content:"";
+      position:absolute;
+      inset:-8px;
+      border-radius:inherit;
+      border:2px solid rgba(37,211,102,.28);
+      animation:ringWA 2.8s infinite;
+    }
+
+    @keyframes pulseWA{
+      0%,100%{transform:translateY(0)}
+      50%{transform:translateY(-3px)}
+    }
+
+    @keyframes ringWA{
+      0%{transform:scale(.92);opacity:.9}
+      70%{transform:scale(1.12);opacity:0}
+      100%{opacity:0}
     }
 
     footer.container{
       text-align:center;
-      padding:2rem 0;
-      color:#63748A;
+      padding:2rem 0 6rem;
+      color:#738397;
     }
 
     @media(max-width:768px){
+      .topbar{
+        font-size:.82rem;
+      }
+
+      .topbar .wrap{
+        flex-direction:column;
+        gap:.25rem;
+        text-align:center;
+      }
+
+      nav.container-fluid{
+        padding:.55rem .8rem;
+      }
+
+      nav ul:last-child li:not(:last-child){
+        display:none;
+      }
+
       main.container{
         padding-top:2rem;
+      }
+
+      .city-seal{
+        margin:.45rem 0 0 0;
+      }
+
+      .cta-row a{
+        width:100%;
       }
 
       .hero-card{
         padding:.75rem;
       }
 
-      .logo-img{
-        max-width:210px;
+      .premium-seal{
+        position:static;
+        display:inline-block;
+        margin-bottom:.7rem;
+      }
+
+      .section{
+        padding:3rem 0;
       }
 
       .floating-wa{
-        left:16px;
-        right:16px;
-        text-align:center;
+        left:14px;
+        right:14px;
+        bottom:14px;
       }
 
-      .cta-row a{
-        width:100%;
-        text-align:center;
+      .logo-img{
+        max-width:235px;
       }
     }
   </style>
 </head>
 
 <body>
+  <div class="topbar">
+    <div class="wrap">
+      <span>📍 Selo: Atendimento em toda Porto Velho</span>
+      <a href="tel:+5569992315490">☎ Telefone/WhatsApp: (69) 99231-5490</a>
+    </div>
+  </div>
+
   <nav class="container-fluid">
     <ul>
       <li><strong>Rondônia Clean</strong></li>
     </ul>
+
     <ul>
       <li><a href="#servicos">Serviços</a></li>
       <li><a href="#depoimentos">Depoimentos</a></li>
-      <li><a href="https://wa.me/5569992315490?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20da%20Rond%C3%B4nia%20Clean" role="button">WhatsApp</a></li>
+      <li>
+        <a href="https://wa.me/5569992315490?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20da%20Rond%C3%B4nia%20Clean" role="button">
+          WhatsApp
+        </a>
+      </li>
     </ul>
   </nav>
 
   <main class="container">
     <div class="grid">
       <section class="hero-copy">
-        <span class="hero-badge">✨ Limpeza profunda • Sofás • Colchões • Poltronas</span>
+        <span class="eyebrow">✨ Higienização profissional em domicílio</span>
+        <span class="city-seal">📍 Toda Porto Velho</span>
 
         <hgroup>
           <h1>
-            Seu sofá limpo, cheiroso e com aparência de novo.
-            <span>Rondônia Clean resolve.</span>
+            Seu estofado limpo, cheiroso e com
+            <span class="accent">aparência renovada</span>.
           </h1>
-          <h3>Higienização profissional que remove sujeira, ácaros, odores e impurezas profundas.</h3>
+
+          <h3>
+            Removemos sujeira, odores, ácaros e impurezas profundas de sofás,
+            colchões, cadeiras e poltronas.
+          </h3>
         </hgroup>
 
         <p>
-          Atendimento cuidadoso para residências e empresas em Rondônia.
-          Serviço ideal para quem quer mais conforto, saúde e uma casa com sensação real de limpeza.
+          A Rondônia Clean entrega um serviço caprichado para quem quer uma casa
+          mais bonita, confortável e saudável, com atendimento rápido em Porto Velho.
         </p>
 
         <div class="cta-row">
-          <a class="whatsapp" href="https://wa.me/5569992315490?text=Ol%C3%A1%2C%20quero%20meu%20or%C3%A7amento%20agora%20para%20higieniza%C3%A7%C3%A3o%20de%20estofados" role="button">
-            Quero meu orçamento agora
+          <a class="btn-wa" href="https://wa.me/5569992315490?text=Ol%C3%A1%2C%20quero%20meu%20or%C3%A7amento%20agora%20para%20higieniza%C3%A7%C3%A3o%20de%20estofados" role="button">
+            Quero orçamento no WhatsApp
           </a>
-          <a class="secondary" href="#antes-depois" role="button">Ver antes e depois</a>
+
+          <a class="btn-light" href="tel:+5569992315490" role="button">
+            Ligar agora
+          </a>
+        </div>
+
+        <div class="trust-row">
+          <span>✅ Atendimento em toda Porto Velho</span>
+          <span>✅ Avaliação antes do serviço</span>
+          <span>✅ Orçamento rápido</span>
         </div>
       </section>
 
       <section class="hero-card">
-        <img class="logo-img" src="logo.png" alt="Rondônia Clean">
+        <span class="premium-seal">Premium Clean</span>
+
+        <div class="logo-panel">
+          <img class="logo-img" src="logo.png" alt="Logo Rondônia Clean">
+          <small>Identidade visual azul, verde e água: limpeza, confiança e resultado</small>
+        </div>
 
         <figure>
-          <img src="sofa1.jpg" alt="Sofá higienizado pela Rondônia Clean">
-          <figcaption>
-            <a href="#" target="_blank">Resultado profissional para seu estofado</a>
-          </figcaption>
+          <img src="sofa1.jpg" alt="Sofá limpo após higienização profissional">
+          <figcaption>Higienização para deixar seu ambiente mais limpo e agradável</figcaption>
         </figure>
       </section>
     </div>
 
     <section class="section" id="antes-depois">
-      <div class="section-title">
+      <div class="section-head">
         <hgroup>
-          <h2>Antes e depois que vende sozinho</h2>
-          <h3>Seu cliente percebe a diferença na hora</h3>
+          <h2>Resultado que aparece no tecido</h2>
+          <h3>Antes e depois com mais limpeza, cor e sensação de cuidado</h3>
         </hgroup>
-        <p>A higienização profissional renova a aparência do estofado e melhora a sensação de limpeza do ambiente.</p>
+
+        <p>
+          Uma boa higienização não é só perfume: é remoção de sujeira acumulada
+          e melhoria real na aparência do estofado.
+        </p>
       </div>
 
       <div class="before-after">
-        <div class="photo-wrap">
+        <div class="photo">
           <span class="label">Antes</span>
-          <img src="sofa2.jpg" alt="Sofá antes da limpeza">
+          <img src="sofa2.jpg" alt="Estofado antes da higienização">
         </div>
 
-        <div class="photo-wrap">
-          <span class="label">Depois</span>
-          <img src="sofa3.jpg" alt="Sofá após a limpeza">
+        <div class="photo">
+          <span class="label after">Depois</span>
+          <img src="sofa3.jpg" alt="Estofado depois da higienização">
         </div>
       </div>
     </section>
 
     <section class="section" id="beneficios">
-      <div class="section-title">
+      <div class="section-head">
         <hgroup>
-          <h2>Benefícios que sua família sente</h2>
-          <h3>Mais saúde, conforto e beleza para sua casa</h3>
+          <h2>Por que higienizar seus estofados?</h2>
+          <h3>Porque o que parece limpo pode esconder sujeira profunda</h3>
         </hgroup>
       </div>
 
       <div class="cards">
         <div class="mini">
           <div class="icon">🛡️</div>
-          <h3>Remove ácaros</h3>
-          <p>Ajuda a reduzir impurezas invisíveis acumuladas no tecido.</p>
+          <h3>Reduz ácaros e impurezas</h3>
+          <p>Ajuda a tornar o ambiente mais confortável para sua família.</p>
         </div>
 
         <div class="mini">
           <div class="icon">🌿</div>
-          <h3>Elimina odores</h3>
-          <p>Ideal para mau cheiro de uso diário, pets, suor e umidade.</p>
+          <h3>Combate mau cheiro</h3>
+          <p>Ótimo para odores de pets, suor, umidade e uso diário.</p>
         </div>
 
         <div class="mini">
           <div class="icon">✨</div>
-          <h3>Revitaliza o tecido</h3>
-          <p>Melhora a aparência do sofá, colchão, cadeira ou poltrona.</p>
+          <h3>Renova a aparência</h3>
+          <p>Melhora a cor, o toque e a sensação visual do tecido.</p>
         </div>
 
         <div class="mini">
           <div class="icon">💧</div>
-          <h3>Limpeza profunda</h3>
-          <p>Processo feito com cuidado para alcançar sujeiras mais difíceis.</p>
+          <h3>Limpeza profissional</h3>
+          <p>Procedimento feito com cuidado, técnica e atenção aos detalhes.</p>
         </div>
       </div>
     </section>
 
     <section class="section" id="servicos">
-      <div class="section-title">
+      <div class="section-head">
         <hgroup>
-          <h2>Serviços da Rondônia Clean</h2>
-          <h3>Limpeza profissional para casa, escritório e veículo</h3>
+          <h2>Serviços em Porto Velho</h2>
+          <h3>Atendimento para residências, empresas e veículos</h3>
         </hgroup>
       </div>
 
       <div class="cards">
-        <div class="mini">
+        <article class="card">
           <h3>Sofás</h3>
-          <p>Higienização de sofás de 2, 3 lugares, retráteis e de canto.</p>
-        </div>
+          <p>Limpeza de sofás retráteis, de canto, 2 e 3 lugares.</p>
+        </article>
 
-        <div class="mini">
+        <article class="card">
           <h3>Colchões e camas</h3>
           <p>Mais higiene para o lugar onde você descansa todos os dias.</p>
-        </div>
+        </article>
 
-        <div class="mini">
+        <article class="card">
           <h3>Cadeiras e poltronas</h3>
-          <p>Perfeito para residências, escritórios, clínicas e salões.</p>
-        </div>
+          <p>Ideal para salas, escritórios, clínicas, recepções e salões.</p>
+        </article>
 
-        <div class="mini">
+        <article class="card">
           <h3>Bancos automotivos</h3>
           <p>Interior do carro mais limpo, agradável e livre de odores.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <hgroup>
+          <h2>Como funciona</h2>
+          <h3>Simples, rápido e transparente</h3>
+        </hgroup>
+      </div>
+
+      <div class="cards process">
+        <div class="mini step">
+          <h3>Você chama no WhatsApp</h3>
+          <p>Envie fotos do estofado e informe sua localização em Porto Velho.</p>
+        </div>
+
+        <div class="mini step">
+          <h3>Recebe o orçamento</h3>
+          <p>Avaliamos o serviço e explicamos o procedimento indicado.</p>
+        </div>
+
+        <div class="mini step">
+          <h3>Agendamos o atendimento</h3>
+          <p>A equipe vai até você no horário combinado.</p>
+        </div>
+
+        <div class="mini step">
+          <h3>Resultado final</h3>
+          <p>Seu estofado fica mais limpo, cheiroso e agradável.</p>
         </div>
       </div>
     </section>
 
     <section class="section" id="depoimentos">
-      <div class="section-title">
+      <div class="section-head">
         <hgroup>
-          <h2>Clientes satisfeitos</h2>
-          <h3>Atendimento com capricho e resultado visível</h3>
+          <h2>O que os clientes valorizam</h2>
+          <h3>Capricho, pontualidade e resultado visível</h3>
         </hgroup>
       </div>
 
@@ -499,43 +800,43 @@
       <article class="guarantee">
         <hgroup>
           <h2>Garantia de atendimento profissional</h2>
-          <h3>Avaliação antes do serviço e transparência no orçamento</h3>
+          <h3>Avaliação honesta antes de começar</h3>
         </hgroup>
 
         <p>
-          A Rondônia Clean avalia o estado do estofado, orienta sobre o procedimento ideal
-          e executa a limpeza com atenção aos detalhes. Manchas antigas podem variar conforme
-          o tipo de tecido e tempo de exposição.
+          A Rondônia Clean avalia o estado do estofado, explica as possibilidades de limpeza
+          e executa o serviço com cuidado. Manchas antigas podem variar conforme o tecido,
+          produto anterior usado e tempo de exposição.
         </p>
       </article>
     </section>
 
     <section class="section" id="faq">
-      <div class="section-title">
+      <div class="section-head">
         <hgroup>
           <h2>Perguntas frequentes</h2>
-          <h3>Tire suas dúvidas antes de solicitar o orçamento</h3>
+          <h3>Respostas claras antes do orçamento</h3>
         </hgroup>
       </div>
 
       <details>
         <summary>Quanto tempo demora a higienização?</summary>
-        <p>Depende do tamanho e estado do estofado. O tempo exato é informado no atendimento pelo WhatsApp.</p>
+        <p>Depende do tamanho e do estado do estofado. O tempo é informado após avaliação por foto ou no local.</p>
       </details>
 
       <details>
         <summary>O estofado fica molhado?</summary>
-        <p>Ele pode ficar levemente úmido e precisa de algumas horas para secagem completa, conforme ventilação do ambiente.</p>
+        <p>Fica úmido após o processo e precisa de algumas horas para secagem completa, conforme ventilação do ambiente.</p>
       </details>
 
       <details>
         <summary>Vocês atendem em domicílio?</summary>
-        <p>Sim. O atendimento é combinado conforme a localização do cliente em Rondônia.</p>
+        <p>Sim. Atendemos em domicílio em toda Porto Velho, conforme agenda disponível.</p>
       </details>
 
       <details>
         <summary>Remove todas as manchas?</summary>
-        <p>A remoção depende do tipo de mancha, tecido e tempo de exposição. Fazemos avaliação antes do procedimento.</p>
+        <p>Depende do tipo de mancha, tecido e tempo de exposição. Por isso fazemos uma avaliação honesta antes do serviço.</p>
       </details>
     </section>
   </main>
@@ -544,8 +845,8 @@
     <div class="container">
       <article>
         <hgroup>
-          <h2>Seu estofado merece esse cuidado hoje</h2>
-          <h3>Peça seu orçamento pelo WhatsApp e receba atendimento rápido.</h3>
+          <h2>Quer seu sofá limpo ainda esta semana?</h2>
+          <h3>Peça seu orçamento pelo WhatsApp agora.</h3>
         </hgroup>
 
         <form class="grid">
@@ -568,7 +869,7 @@
     <small>
       <a href="https://wa.me/5569992315490">WhatsApp: (69) 99231-5490</a>
       •
-      <a href="#">Rondônia Clean</a>
+      <a href="#">Rondônia Clean — Porto Velho</a>
     </small>
   </footer>
 </body>
