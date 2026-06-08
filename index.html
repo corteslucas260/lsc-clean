@@ -3,500 +3,392 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>Rondônia Clean | Higienização Profissional de Estofados em Porto Velho</title>
-
-<meta name="description" content="Higienização profissional de sofás, colchões e cadeiras estofadas em Porto Velho. Atendimento em domicílio e orçamento pelo WhatsApp.">
-
+<title>Rondônia Clean | Higienização de Estofados</title>
+<meta name="description" content="Higienização profissional de sofás, colchões e cadeiras estofadas em Porto Velho, Nova Mutum Paraná e Jaci-Paraná.">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
 
 <style>
-
 :root{
-  --primary:#20bf63;
-  --navy:#061a3a;
-  --blue:#123c8c;
-  --blue2:#1d63d8;
-  --green:#20bf63;
-  --cyan:#19b7d8;
-  --text:#102033;
-  --muted:#5d7187;
-  --line:#dce9f4;
+--navy:#061a3a;
+--blue:#123c8c;
+--blue2:#1d63d8;
+--green:#20bf63;
+--cyan:#19b7d8;
+--text:#102033;
+--muted:#5d7187;
+--line:#dce9f4;
 }
 
-*{
-  box-sizing:border-box;
-  scroll-behavior:smooth;
-}
+*{box-sizing:border-box;scroll-behavior:smooth}
 
 body{
-  margin:0;
-  color:var(--text);
-
-  background:
-  radial-gradient(circle at 10% 0%,rgba(25,183,216,.20),transparent 32rem),
-  radial-gradient(circle at 90% 10%,rgba(32,191,99,.12),transparent 26rem),
-  linear-gradient(180deg,#f5fcff 0%,#ffffff 45%,#f8fff9 100%);
-
-  font-family:Inter,system-ui,sans-serif;
+margin:0;
+color:var(--text);
+background:linear-gradient(180deg,#f5fcff 0%,#fff 45%,#f8fff9 100%);
+font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
 }
 
 .topbar{
-  background:linear-gradient(90deg,var(--navy),var(--blue));
-  color:#fff;
-  text-align:center;
-  padding:.5rem;
-  font-weight:800;
-  font-size:.9rem;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:1001;
+background:linear-gradient(90deg,#061a3a,#123c8c);
+color:#fff;
+text-align:center;
+padding:12px;
+font-size:1rem;
+font-weight:900;
+letter-spacing:.3px;
+box-shadow:0 3px 10px rgba(0,0,0,.15);
 }
 
 nav.container-fluid{
-  position:sticky;
-  top:0;
-  z-index:999;
-  background:rgba(255,255,255,.95);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid rgba(0,0,0,.05);
+position:fixed;
+top:50px;
+left:0;
+width:100%;
+z-index:1000;
+background:rgba(255,255,255,.97);
+backdrop-filter:blur(12px);
+border-bottom:1px solid rgba(0,0,0,.06);
+padding:.8rem 1.2rem;
+box-shadow:0 6px 18px rgba(0,0,0,.04);
 }
 
 nav strong{
-  color:var(--blue);
+color:var(--blue);
+font-weight:950;
+}
+
+nav a{
+font-weight:800;
+color:var(--blue);
+text-decoration:none;
 }
 
 nav a[role=button]{
-  background:linear-gradient(135deg,#20bf63,#39db7d);
-  border:none;
-  border-radius:999px;
+background:linear-gradient(135deg,#20bf63,#39db7d);
+border:none;
+border-radius:999px;
+color:#fff;
 }
 
 main.container{
-  padding-top:3rem;
+padding-top:180px;
 }
 
 .grid{
-  align-items:center;
-  gap:2rem;
+align-items:center;
+gap:2rem;
 }
 
 .eyebrow{
-  display:inline-flex;
-  align-items:center;
-  gap:.4rem;
-
-  background:#eafcff;
-  color:#0b6d83;
-
-  padding:.5rem .9rem;
-  border-radius:999px;
-  font-size:.85rem;
-  font-weight:900;
+display:inline-flex;
+background:#eafcff;
+color:#0b6d83;
+padding:.5rem .9rem;
+border-radius:999px;
+font-size:.85rem;
+font-weight:900;
+margin-bottom:1rem;
 }
 
 h1{
-  font-size:clamp(2.4rem,5vw,4.8rem);
-  line-height:1.02;
-  letter-spacing:-.05em;
-  color:var(--navy);
-  margin-bottom:1rem;
+font-size:clamp(2.4rem,5vw,4.8rem);
+line-height:1.02;
+letter-spacing:-.05em;
+color:var(--navy);
 }
 
 .accent{
-  background:linear-gradient(
-  90deg,
-  var(--blue),
-  var(--blue2),
-  var(--green)
-  );
-
-  -webkit-background-clip:text;
-  background-clip:text;
-  color:transparent;
+background:linear-gradient(90deg,var(--blue),var(--blue2),var(--green));
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
 }
 
-h2{
-  color:var(--navy);
-}
-
-h3{
-  color:var(--blue);
-}
-
-.hero-copy p{
-  font-size:1.1rem;
-}
+h2{color:var(--navy)}
+h3{color:var(--blue)}
+p{color:var(--muted);line-height:1.7}
 
 .cta-row{
-  display:flex;
-  flex-wrap:wrap;
-  gap:.8rem;
-  margin-top:1.5rem;
+display:flex;
+flex-wrap:wrap;
+gap:.8rem;
+margin-top:1.5rem;
+}
+
+.btn-wa,.btn-secondary{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+border-radius:999px;
+padding:1rem 1.3rem;
+text-decoration:none;
+font-weight:900;
 }
 
 .btn-wa{
-  background:linear-gradient(
-  135deg,
-  #20bf63,
-  #39db7d
-  );
-
-  color:#fff;
-  border-radius:999px;
-  padding:1rem 1.3rem;
-  text-decoration:none;
-  font-weight:900;
+background:linear-gradient(135deg,#20bf63,#39db7d);
+color:#fff;
+box-shadow:0 18px 38px rgba(32,191,99,.28);
 }
 
 .btn-secondary{
-  background:#fff;
-  border:1px solid var(--line);
-  color:var(--blue);
-  border-radius:999px;
-  padding:1rem 1.3rem;
-  text-decoration:none;
-  font-weight:900;
+background:#fff;
+border:1px solid var(--line);
+color:var(--blue);
 }
 
 .trust-row{
-  display:flex;
-  flex-wrap:wrap;
-  gap:.6rem;
-  margin-top:1rem;
+display:flex;
+flex-wrap:wrap;
+gap:.6rem;
+margin-top:1rem;
 }
 
 .trust-row span{
-  background:#fff;
-  border:1px solid var(--line);
-  border-radius:999px;
-  padding:.5rem .8rem;
-  font-weight:700;
-}
-
-.hero-card{
-  background:transparent;
-  border:none;
-  box-shadow:none;
+background:#fff;
+border:1px solid var(--line);
+border-radius:999px;
+padding:.5rem .8rem;
+font-weight:700;
 }
 
 .hero-result img{
-  width:100%;
-  border-radius:24px;
-  display:block;
-  box-shadow:0 20px 50px rgba(0,0,0,.12);
+width:100%;
+border-radius:24px;
+display:block;
+box-shadow:0 20px 50px rgba(0,0,0,.12);
 }
 
 .hero-result figcaption{
-  text-align:center;
-  margin-top:.7rem;
-  color:#5d7187;
+text-align:center;
+margin-top:.7rem;
+color:#5d7187;
 }
 
 .result-badges{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:.6rem;
-  margin-top:1rem;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:.6rem;
+margin-top:1rem;
 }
 
 .result-badges span{
-  background:#fff;
-  border:1px solid var(--line);
-  color:var(--blue);
-  border-radius:999px;
-  padding:.5rem .8rem;
-  font-weight:800;
+background:#fff;
+border:1px solid var(--line);
+color:var(--blue);
+border-radius:999px;
+padding:.5rem .8rem;
+font-weight:800;
 }
 
 .section{
-  padding:4rem 0;
+padding:4rem 0;
 }
 
 .section-head{
-  text-align:center;
-  max-width:800px;
-  margin:auto;
-  margin-bottom:2rem;
+text-align:center;
+max-width:800px;
+margin:0 auto 2rem;
 }
 
 .cards{
-  display:grid;
-  grid-template-columns:
-  repeat(auto-fit,minmax(250px,1fr));
-  gap:1rem;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:1rem;
 }
 
-.card,
-.mini,
-details{
-  background:#fff;
-  border:1px solid rgba(0,0,0,.05);
-  border-radius:24px;
-  padding:1.3rem;
-  box-shadow:0 10px 30px rgba(0,0,0,.05);
+.card,.mini,details{
+background:#fff;
+border:1px solid rgba(0,0,0,.05);
+border-radius:24px;
+padding:1.3rem;
+box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+
+.card footer{
+background:linear-gradient(135deg,#f5fbff,#eef9ff);
+color:var(--blue);
+border:1px solid var(--line);
+border-radius:14px;
+padding:14px;
+margin-top:1rem;
+font-weight:800;
 }
 
 .icon{
-  width:48px;
-  height:48px;
-  border-radius:14px;
-
-  display:grid;
-  place-items:center;
-
-  background:
-  linear-gradient(
-  135deg,
-  #e8fbff,
-  #e8fff1
-  );
-
-  font-size:1.4rem;
+width:48px;
+height:48px;
+border-radius:14px;
+display:grid;
+place-items:center;
+background:linear-gradient(135deg,#e8fbff,#e8fff1);
+font-size:1.4rem;
+margin-bottom:.8rem;
 }
 
 .proof-strip{
-  display:grid;
-  grid-template-columns:
-  repeat(auto-fit,minmax(200px,1fr));
-
-  gap:1rem;
-  margin-top:2rem;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:1rem;
+margin-top:2rem;
 }
 
 .proof-item{
-  background:#fff;
-  border:1px solid var(--line);
-  border-radius:20px;
-  padding:1rem;
-  text-align:center;
+background:#fff;
+border:1px solid var(--line);
+border-radius:20px;
+padding:1rem;
+text-align:center;
 }
 
 .proof-item strong{
-  display:block;
-  color:var(--blue);
-  font-size:1.5rem;
+display:block;
+color:var(--blue);
+font-size:1.5rem;
 }
 
 .gallery-grid{
-  display:grid;
-  grid-template-columns:
-  repeat(auto-fit,minmax(280px,1fr));
-
-  gap:20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
 }
 
 .gallery-grid figure{
-  margin:0;
-  overflow:hidden;
-
-  background:#fff;
-  border-radius:24px;
-  border:1px solid var(--line);
-
-  transition:.3s;
+margin:0;
+overflow:hidden;
+background:#fff;
+border-radius:24px;
+border:1px solid var(--line);
+transition:.3s;
 }
 
 .gallery-grid figure:hover{
-  transform:translateY(-6px);
+transform:translateY(-6px);
 }
 
 .gallery-grid img{
-  width:100%;
-  height:320px;
-  object-fit:cover;
-  display:block;
+width:100%;
+height:320px;
+object-fit:cover;
+display:block;
 }
 
 .gallery-grid figcaption{
-  text-align:center;
-  padding:1rem;
-  font-weight:800;
-  color:var(--blue);
+text-align:center;
+padding:1rem;
+font-weight:800;
+color:var(--blue);
 }
 
-.mid-cta{
-  background:
-  linear-gradient(
-  135deg,
-  var(--navy),
-  var(--blue),
-  var(--green)
-  );
-
-  border-radius:30px;
-  padding:2rem;
-  color:#fff;
+.mid-cta,.guarantee{
+background:linear-gradient(135deg,var(--navy),var(--blue),var(--green));
+border-radius:30px;
+padding:2rem;
+color:#fff;
 }
 
-.mid-cta h2,
-.mid-cta h3,
-.mid-cta p{
-  color:#fff;
+.mid-cta h2,.mid-cta h3,.mid-cta p,
+.guarantee h2,.guarantee h3,.guarantee p{
+color:#fff;
 }
 
-.process{
-  counter-reset:step;
-}
+.process{counter-reset:step}
 
 .step{
-  position:relative;
-  padding-left:4rem;
+position:relative;
+padding-left:4rem;
 }
 
 .step:before{
-  counter-increment:step;
-  content:counter(step);
-
-  position:absolute;
-  left:1rem;
-  top:1.1rem;
-
-  width:34px;
-  height:34px;
-
-  border-radius:50%;
-
-  background:var(--blue);
-  color:#fff;
-
-  display:grid;
-  place-items:center;
-
-  font-weight:900;
-}
-  .card footer{
-  background:linear-gradient(
-  135deg,
-  #f5fbff,
-  #eef9ff
-  );
-
-  color:var(--blue);
-
-  border:1px solid var(--line);
-  border-radius:14px;
-
-  padding:14px;
-  margin-top:1rem;
-
-  font-weight:800;
-}
-
-.guarantee{
-  background:
-  linear-gradient(
-  135deg,
-  var(--navy),
-  var(--blue),
-  var(--green)
-  );
-
-  border-radius:30px;
-  padding:2rem;
-}
-
-.guarantee h2,
-.guarantee h3,
-.guarantee p{
-  color:#fff;
-}
-
-details{
-  margin-bottom:.8rem;
+counter-increment:step;
+content:counter(step);
+position:absolute;
+left:1rem;
+top:1.1rem;
+width:34px;
+height:34px;
+border-radius:50%;
+background:var(--blue);
+color:#fff;
+display:grid;
+place-items:center;
+font-weight:900;
 }
 
 summary{
-  color:var(--blue);
-  font-weight:900;
+color:var(--blue);
+font-weight:900;
 }
 
 .floating-wa{
-  position:fixed;
-  right:20px;
-  bottom:20px;
-
-  width:65px;
-  height:65px;
-
-  background:#25D366;
-  border-radius:50%;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  z-index:9999;
-
-  box-shadow:0 15px 35px rgba(37,211,102,.4);
+position:fixed;
+right:20px;
+bottom:20px;
+width:65px;
+height:65px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:9999;
+box-shadow:0 15px 35px rgba(37,211,102,.4);
 }
 
 .floating-wa svg{
-  width:34px;
-  fill:#fff;
+width:34px;
+fill:#fff;
 }
 
 footer.container{
-  text-align:center;
-  padding:2rem 0 6rem;
+text-align:center;
+padding:2rem 0 6rem;
 }
 
 @media(max-width:768px){
-
-  .cta-row a{
-    width:100%;
-  }
-
-  .gallery-grid{
-    grid-template-columns:1fr;
-  }
-
-  .gallery-grid img{
-    height:auto;
-  }
-
+.topbar{font-size:.82rem;padding:10px}
+nav.container-fluid{top:46px}
+main.container{padding-top:160px}
+nav ul:last-child li:not(:last-child){display:none}
+.cta-row a{width:100%}
+.gallery-grid{grid-template-columns:1fr}
+.gallery-grid img{height:auto}
+.floating-wa{width:60px;height:60px;right:16px;bottom:16px}
 }
 </style>
 </head>
-
 <body>
 
 <div class="topbar">
-📍 Atendimento em toda Porto Velho
+🚚 Atendimento em Porto Velho, Nova Mutum Paraná, Jaci-Paraná e região
 </div>
 
 <nav class="container-fluid">
-  <ul>
-    <li><strong>Rondônia Clean</strong></li>
-  </ul>
-
-  <ul>
-    <li><a href="#servicos">Serviços</a></li>
-    <li><a href="#depoimentos">Depoimentos</a></li>
-
-    <li>
-      <a
-      href="https://wa.me/5569992315490"
-      role="button">
-      WhatsApp
-      </a>
-    </li>
-  </ul>
+<ul>
+<li><strong>Rondônia Clean</strong></li>
+</ul>
+<ul>
+<li><a href="#servicos">Serviços</a></li>
+<li><a href="#depoimentos">Depoimentos</a></li>
+<li><a href="https://wa.me/5569992315490?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20da%20Rond%C3%B4nia%20Clean" role="button">WhatsApp</a></li>
+</ul>
 </nav>
 
 <main class="container">
 
 <div class="grid">
-
 <section class="hero-copy">
-
-<span class="eyebrow">
-✨ Higienização profissional em domicílio
-</span>
+<span class="eyebrow">✨ Higienização profissional em domicílio</span>
 
 <h1>
 Seu estofado limpo, cheiroso e com
-<span class="accent">
-aparência renovada
-</span>
+<span class="accent">aparência renovada</span>.
 </h1>
 
 <h3>
@@ -505,23 +397,18 @@ colchões e cadeiras estofadas.
 </h3>
 
 <p>
-Atendimento profissional em Porto Velho com orçamento rápido pelo WhatsApp.
+Atendimento profissional em Porto Velho, Nova Mutum Paraná, Jaci-Paraná e região,
+com orçamento rápido pelo WhatsApp.
 </p>
 
 <div class="cta-row">
-
-<a
-class="btn-wa"
-href="https://wa.me/5569992315490">
+<a class="btn-wa" href="https://wa.me/5569992315490?text=Ol%C3%A1%2C%20quero%20meu%20or%C3%A7amento%20para%20higieniza%C3%A7%C3%A3o%20de%20estofados">
 Quero orçamento no WhatsApp
 </a>
 
-<a
-class="btn-secondary"
-href="#resultados">
+<a class="btn-secondary" href="#resultados">
 Ver resultados
 </a>
-
 </div>
 
 <div class="trust-row">
@@ -529,21 +416,12 @@ Ver resultados
 <span>✅ Avaliação rápida</span>
 <span>✅ Orçamento pelo WhatsApp</span>
 </div>
-
 </section>
 
 <section class="hero-card">
-
 <figure class="hero-result">
-
-<img
-src="sofa1.jpg"
-alt="Resultado de higienização">
-
-<figcaption>
-Resultado real de higienização profissional
-</figcaption>
-
+<img src="sofa1.jpg" alt="Resultado de higienização">
+<figcaption>Resultado real de higienização profissional</figcaption>
 </figure>
 
 <div class="result-badges">
@@ -551,162 +429,131 @@ Resultado real de higienização profissional
 <span>✓ Reduz ácaros</span>
 <span>✓ Aparência renovada</span>
 </div>
-
 </section>
-
 </div>
 
 <section class="section" id="beneficios">
-
 <div class="section-head">
-
 <h2>Por que higienizar seus estofados?</h2>
-
-<p>
-O que parece limpo pode esconder sujeira, odores e impurezas acumuladas.
-</p>
-
+<p>O que parece limpo pode esconder sujeira, odores e impurezas acumuladas.</p>
 </div>
 
 <div class="cards">
-
 <div class="mini">
 <div class="icon">🛡️</div>
 <h3>Reduz ácaros</h3>
-<p>Mais conforto para sua família.</p>
+<p>Mais conforto e cuidado para sua família.</p>
 </div>
 
 <div class="mini">
 <div class="icon">🌿</div>
 <h3>Combate odores</h3>
-<p>Elimina cheiros desagradáveis.</p>
+<p>Ajuda a eliminar cheiros desagradáveis do dia a dia.</p>
 </div>
 
 <div class="mini">
 <div class="icon">✨</div>
 <h3>Renova aparência</h3>
-<p>Visual mais limpo e agradável.</p>
+<p>Visual mais limpo, agradável e bem cuidado.</p>
 </div>
 
 <div class="mini">
 <div class="icon">💧</div>
 <h3>Limpeza profissional</h3>
-<p>Técnica adequada para cada tecido.</p>
+<p>Técnica adequada para cada tipo de estofado.</p>
 </div>
-
 </div>
 
 <div class="proof-strip">
-
 <div class="proof-item">
-<strong>Porto Velho</strong>
-Atendimento local
+<strong>Região</strong>
+Porto Velho, Nova Mutum e Jaci-Paraná
 </div>
 
 <div class="proof-item">
 <strong>WhatsApp</strong>
-Orçamento rápido
+Orçamento rápido por foto
 </div>
 
 <div class="proof-item">
 <strong>Domicílio</strong>
-Mais praticidade
+Mais praticidade para você
 </div>
-
 </div>
-
 </section>
 
 <section class="section" id="resultados">
-
 <div class="section-head">
 <h2>Resultados reais</h2>
-<p>Veja alguns trabalhos realizados.</p>
+<p>Veja alguns trabalhos realizados pela Rondônia Clean.</p>
 </div>
 
 <div class="gallery-grid">
-
 <figure>
-<img src="sofa1.jpg">
+<img loading="lazy" src="sofa1.jpg" alt="Sofá higienizado">
 <figcaption>Sofá higienizado</figcaption>
 </figure>
 
 <figure>
-<img src="sofa2.jpg">
+<img loading="lazy" src="sofa2.jpg" alt="Transformação de estofado">
 <figcaption>Transformação de estofado</figcaption>
 </figure>
 
 <figure>
-<img src="sofa3.jpg">
+<img loading="lazy" src="sofa3.jpg" alt="Resultado profissional">
 <figcaption>Resultado profissional</figcaption>
 </figure>
 
 <figure>
-<img src="colchao1.jpg">
+<img loading="lazy" src="colchao1.jpg" alt="Limpeza de colchão">
 <figcaption>Limpeza de colchão</figcaption>
 </figure>
 
 <figure>
-<img src="colchao2.jpg">
+<img loading="lazy" src="colchao2.jpg" alt="Remoção de impurezas">
 <figcaption>Remoção de impurezas</figcaption>
 </figure>
 
 <figure>
-<img src="colchao3.jpg">
+<img loading="lazy" src="colchao3.jpg" alt="Colchão mais limpo">
 <figcaption>Colchão mais limpo</figcaption>
 </figure>
 
 <figure>
-<img src="cadeira1.jpg">
+<img loading="lazy" src="cadeira1.jpg" alt="Limpeza de cadeira estofada">
 <figcaption>Limpeza de cadeira estofada</figcaption>
 </figure>
 
 <figure>
-<img src="poltrona1.jpg">
-<figcaption>Cadeiras renovadas</figcaption>
+<img loading="lazy" src="poltrona1.jpg" alt="Cadeiras renovadas">
+<figcaption>Cadeiras estofadas renovadas</figcaption>
 </figure>
 
 <figure>
-<img src="poltrona2.jpg">
+<img loading="lazy" src="poltrona2.jpg" alt="Higienização de cadeiras">
 <figcaption>Higienização de cadeiras</figcaption>
 </figure>
-
 </div>
-
 </section>
 
 <section class="section">
-
 <article class="mid-cta">
-
-<h2>
-Envie uma foto do seu estofado pelo WhatsApp
-</h2>
-
-<p>
-Receba orientação rápida e orçamento sem compromisso.
-</p>
-
+<h2>Envie uma foto do seu estofado pelo WhatsApp</h2>
+<p>Receba orientação rápida e orçamento sem compromisso.</p>
 <br>
-
-<a
-class="btn-wa"
-href="https://wa.me/5569992315490">
+<a class="btn-wa" href="https://wa.me/5569992315490?text=Ol%C3%A1%2C%20quero%20enviar%20fotos%20do%20meu%20estofado%20para%20or%C3%A7amento">
 Enviar foto agora
 </a>
-
 </article>
-
 </section>
 
 <section class="section" id="servicos">
-
 <div class="section-head">
 <h2>Serviços</h2>
+<p>Higienização profissional para casa, empresa e veículo.</p>
 </div>
 
 <div class="cards">
-
 <article class="card">
 <h3>Sofás</h3>
 <p>Limpeza de sofás de todos os tamanhos.</p>
@@ -719,139 +566,129 @@ Enviar foto agora
 
 <article class="card">
 <h3>Cadeiras estofadas</h3>
-<p>Residencial e comercial.</p>
+<p>Limpeza residencial, comercial e corporativa.</p>
 </article>
 
 <article class="card">
 <h3>Bancos automotivos</h3>
-<p>Limpeza interna completa.</p>
+<p>Limpeza interna para deixar seu carro mais agradável.</p>
 </article>
+</div>
+</section>
 
+<section class="section">
+<div class="section-head">
+<h2>Como funciona</h2>
+<p>Simples, rápido e transparente.</p>
 </div>
 
+<div class="cards process">
+<div class="mini step">
+<h3>Você chama no WhatsApp</h3>
+<p>Envie fotos do estofado e informe sua localização.</p>
+</div>
+
+<div class="mini step">
+<h3>Recebe o orçamento</h3>
+<p>Avaliamos o serviço e explicamos o procedimento indicado.</p>
+</div>
+
+<div class="mini step">
+<h3>Agendamos o atendimento</h3>
+<p>A equipe vai até você no horário combinado.</p>
+</div>
+
+<div class="mini step">
+<h3>Resultado final</h3>
+<p>Seu estofado fica mais limpo, cheiroso e agradável.</p>
+</div>
+</div>
 </section>
 
 <section class="section" id="depoimentos">
-
 <div class="section-head">
 <h2>Depoimentos</h2>
+<p>Clientes valorizam capricho, pontualidade e resultado visível.</p>
 </div>
 
 <div class="cards">
-
 <article class="card">
-<p>
-Meu sofá ficou com outra aparência.
-</p>
-
-<footer>
-⭐⭐⭐⭐⭐ Ana Paula • Embratel
-</footer>
+<p>“Meu sofá ficou com outra aparência. Atendimento rápido e muito cuidadoso.”</p>
+<footer>⭐⭐⭐⭐⭐ Ana Paula • Embratel</footer>
 </article>
 
 <article class="card">
-<p>
-Serviço muito caprichado.
-</p>
-
-<footer>
-⭐⭐⭐⭐⭐ Marcos Silva • Zona Sul
-</footer>
+<p>“Saiu o cheiro ruim do colchão e a casa ficou muito mais agradável.”</p>
+<footer>⭐⭐⭐⭐⭐ Marcos Silva • Zona Sul</footer>
 </article>
 
 <article class="card">
-<p>
-Atendimento rápido e resultado excelente.
-</p>
-
-<footer>
-⭐⭐⭐⭐⭐ Juliana Costa • Nova Porto Velho
-</footer>
+<p>“Serviço caprichado. Chamei pelo WhatsApp e fui atendida muito bem.”</p>
+<footer>⭐⭐⭐⭐⭐ Juliana Costa • Nova Porto Velho</footer>
 </article>
-
 </div>
-
 </section>
 
 <section class="section">
-
 <article class="guarantee">
-
-<h2>
-Garantia de atendimento profissional
-</h2>
-
+<h2>Garantia de atendimento profissional</h2>
 <p>
-Avaliação honesta e execução cuidadosa do serviço.
+A Rondônia Clean avalia o estado do estofado, explica as possibilidades
+de limpeza e executa o serviço com cuidado. Manchas antigas podem variar
+conforme o tecido, produto anterior usado e tempo de exposição.
 </p>
-
 </article>
-
 </section>
 
-<section class="section">
-
+<section class="section" id="faq">
 <div class="section-head">
 <h2>Perguntas frequentes</h2>
+<p>Respostas claras antes do orçamento.</p>
 </div>
 
 <details>
-<summary>Atende em toda Porto Velho?</summary>
-<p>Sim.</p>
+<summary>Atende em quais regiões?</summary>
+<p>Atendemos Porto Velho, Nova Mutum Paraná, Jaci-Paraná e região.</p>
 </details>
 
 <details>
 <summary>O estofado fica molhado?</summary>
-<p>Fica levemente úmido durante a secagem.</p>
+<p>Ele fica úmido durante a secagem e precisa de algumas horas para secar completamente.</p>
 </details>
 
 <details>
 <summary>Quanto tempo demora?</summary>
-<p>Depende do tipo de estofado.</p>
+<p>Depende do tamanho e estado do estofado. O tempo é informado no orçamento.</p>
 </details>
 
+<details>
+<summary>Remove todas as manchas?</summary>
+<p>Depende do tipo de mancha, tecido e tempo de exposição. Fazemos uma avaliação honesta antes do serviço.</p>
+</details>
 </section>
 
 </main>
 
 <section aria-label="Subscribe example">
-
 <div class="container">
-
 <article>
-
-<h2>
-Quer seu estofado limpo ainda esta semana?
-</h2>
-
-<p>
-Solicite seu orçamento agora.
-</p>
-
-<a
-class="btn-wa"
-href="https://wa.me/5569992315490">
+<h2>Quer seu estofado limpo ainda esta semana?</h2>
+<p>Solicite seu orçamento agora pelo WhatsApp.</p>
+<a class="btn-wa" href="https://wa.me/5569992315490?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20da%20Rond%C3%B4nia%20Clean">
 Solicitar orçamento
 </a>
-
 </article>
-
 </div>
-
 </section>
 
-<a
-class="floating-wa"
-href="https://wa.me/5569992315490">
-
+<a class="floating-wa" href="https://wa.me/5569992315490?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20da%20Rond%C3%B4nia%20Clean" aria-label="Chamar no WhatsApp">
 <svg viewBox="0 0 24 24">
 <path d="M20.52 3.48A11.82 11.82 0 0 0 12.04 0C5.5 0 .16 5.34.16 11.88c0 2.1.55 4.16 1.6 5.98L0 24l6.32-1.66a11.85 11.85 0 0 0 5.72 1.46h.01c6.54 0 11.88-5.34 11.88-11.88"/>
 </svg>
-
 </a>
 
 <footer class="container">
-<small>Rondônia Clean • Porto Velho</small>
+<small>Rondônia Clean • Porto Velho • Nova Mutum Paraná • Jaci-Paraná</small>
 </footer>
 
 </body>
