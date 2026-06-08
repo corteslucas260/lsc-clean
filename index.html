@@ -150,7 +150,7 @@
       margin:1.6rem 0 1rem;
     }
 
-    .btn-wa{
+    .btn-wa,.btn-secondary{
       display:inline-flex;
       align-items:center;
       justify-content:center;
@@ -159,11 +159,21 @@
       text-decoration:none;
       min-height:52px;
       padding:.9rem 1.25rem;
+    }
+
+    .btn-wa{
       background:linear-gradient(135deg,var(--green),#37d979);
       color:#fff;
       box-shadow:0 18px 38px rgba(32,191,99,.30);
       border:0;
       text-transform:uppercase;
+    }
+
+    .btn-secondary{
+      background:#fff;
+      color:#123c8c;
+      border:1px solid #dce9f4;
+      box-shadow:0 12px 28px rgba(13,47,104,.08);
     }
 
     .trust-row{
@@ -219,14 +229,13 @@
 
     figure{margin:0}
 
-    figure img,.before-after img{
+    figure img{
       width:100%;
       border-radius:22px;
       object-fit:cover;
       box-shadow:0 18px 40px rgba(8,27,61,.12);
+      max-height:410px;
     }
-
-    figure img{max-height:410px}
 
     figcaption{
       text-align:center;
@@ -296,27 +305,42 @@
       margin-bottom:.85rem;
     }
 
-    .before-after{
+    .gallery-grid{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:1rem;
+      gap:20px;
     }
 
-    .photo{position:relative}
-
-    .label{
-      position:absolute;
-      left:16px;
-      top:16px;
-      background:rgba(8,27,61,.86);
-      color:#fff;
-      border-radius:999px;
-      padding:.35rem .8rem;
-      font-weight:900;
-      font-size:.82rem;
+    .gallery-grid figure{
+      margin:0;
+      background:#fff;
+      border-radius:24px;
+      overflow:hidden;
+      border:1px solid #dce9f4;
+      box-shadow:0 15px 40px rgba(0,0,0,.08);
+      transition:.3s ease;
     }
 
-    .label.after{background:linear-gradient(135deg,var(--green),var(--green-2))}
+    .gallery-grid figure:hover{
+      transform:translateY(-6px);
+      box-shadow:0 20px 50px rgba(0,0,0,.12);
+    }
+
+    .gallery-grid img{
+      width:100%;
+      height:320px;
+      object-fit:cover;
+      display:block;
+    }
+
+    .gallery-grid figcaption{
+      padding:16px;
+      text-align:center;
+      font-weight:800;
+      color:#123c8c;
+      background:#fff;
+      margin:0;
+    }
 
     .process{counter-reset:step}
     .step{position:relative;padding-left:3.6rem}
@@ -428,6 +452,8 @@
       .cta-row a{width:100%}
       .hero-card{padding:.75rem}
       .section{padding:3rem 0}
+      .gallery-grid{grid-template-columns:1fr}
+      .gallery-grid img{height:auto}
       .floating-wa{width:60px;height:60px;right:16px;bottom:16px}
       .floating-wa svg{width:30px;height:30px}
       .logo-img{max-width:220px}
@@ -464,6 +490,7 @@
 
         <div class="cta-row">
           <a class="btn-wa" href="https://wa.me/5569992315490?text=Ol%C3%A1%2C%20quero%20meu%20or%C3%A7amento%20agora%20para%20higieniza%C3%A7%C3%A3o%20de%20estofados" role="button">Quero orçamento no WhatsApp</a>
+          <a class="btn-secondary" href="#resultados" role="button">Ver resultados</a>
         </div>
 
         <div class="trust-row">
@@ -491,28 +518,6 @@
         </div>
       </section>
     </div>
-
-    <section class="section" id="antes-depois">
-      <div class="section-head">
-        <hgroup>
-          <h2>Resultado que aparece no tecido</h2>
-          <h3>Antes e depois com mais limpeza, cor e sensação de cuidado</h3>
-        </hgroup>
-        <p>Uma boa higienização não é só perfume: é remoção de sujeira acumulada e melhoria real na aparência do estofado.</p>
-      </div>
-
-      <div class="before-after">
-        <div class="photo">
-          <span class="label">Antes</span>
-          <img src="sofa2.jpg" alt="Estofado antes da higienização">
-        </div>
-
-        <div class="photo">
-          <span class="label after">Depois</span>
-          <img src="sofa3.jpg" alt="Estofado depois da higienização">
-        </div>
-      </div>
-    </section>
 
     <section class="section" id="beneficios">
       <div class="section-head">
@@ -546,6 +551,64 @@
           <h3>Limpeza profissional</h3>
           <p>Procedimento feito com cuidado, técnica e atenção aos detalhes.</p>
         </div>
+      </div>
+    </section>
+
+    <section class="section" id="resultados">
+      <div class="section-head">
+        <hgroup>
+          <h2>Resultados reais</h2>
+          <h3>Veja alguns serviços realizados pela Rondônia Clean</h3>
+        </hgroup>
+
+        <p>Cada estofado recebe uma avaliação individual para garantir o melhor resultado possível na limpeza e higienização.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <figure>
+          <img src="sofa1.jpg" alt="Sofá higienizado">
+          <figcaption>Sofá higienizado</figcaption>
+        </figure>
+
+        <figure>
+          <img src="sofa2.jpg" alt="Transformação de sofá">
+          <figcaption>Transformação de estofado</figcaption>
+        </figure>
+
+        <figure>
+          <img src="sofa3.jpg" alt="Resultado profissional em sofá">
+          <figcaption>Resultado profissional</figcaption>
+        </figure>
+
+        <figure>
+          <img src="poltrona1.jpg" alt="Poltrona higienizada">
+          <figcaption>Poltrona renovada</figcaption>
+        </figure>
+
+        <figure>
+          <img src="poltrona2.jpg" alt="Limpeza de poltrona">
+          <figcaption>Higienização de poltrona</figcaption>
+        </figure>
+
+        <figure>
+          <img src="colchao1.jpg" alt="Colchão higienizado">
+          <figcaption>Limpeza de colchão</figcaption>
+        </figure>
+
+        <figure>
+          <img src="colchao2.jpg" alt="Higienização profunda de colchão">
+          <figcaption>Remoção de impurezas</figcaption>
+        </figure>
+
+        <figure>
+          <img src="colchao3.jpg" alt="Resultado em colchão">
+          <figcaption>Colchão mais limpo</figcaption>
+        </figure>
+
+        <figure>
+          <img src="cadeira1.jpg" alt="Cadeira higienizada">
+          <figcaption>Limpeza de cadeiras</figcaption>
+        </figure>
       </div>
     </section>
 
