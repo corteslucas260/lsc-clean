@@ -10,11 +10,18 @@
   !function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
   n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
+  if(!f._fbq)f._fbq=n;
+  n.push=n;
+  n.loaded=!0;
+  n.version='2.0';
+  n.queue=[];
+  t=b.createElement(e);
+  t.async=!0;
+  t.src=v;
+  s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)
+  }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
   fbq('init', '981317201357491');
   fbq('track', 'PageView');
   </script>
@@ -33,517 +40,712 @@
       font-family: Arial, Helvetica, sans-serif;
     }
 
-    body {
-      background: #f5f8f7;
-      color: #1f2933;
-      line-height: 1.6;
+    html {
+      scroll-behavior: smooth;
     }
 
-    section {
-      padding: 45px 20px;
+    body {
+      background: #f7fffc;
+      color: #12332a;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
     }
 
     .container {
-      max-width: 1100px;
+      width: 92%;
+      max-width: 1180px;
       margin: auto;
     }
 
     .hero {
-      background: linear-gradient(135deg, #007f5f, #00b894);
+      position: relative;
+      min-height: 680px;
+      color: #fff;
+      background:
+        linear-gradient(rgba(0, 45, 30, 0.82), rgba(0, 45, 30, 0.82)),
+        url("hero-sofa.jpg") center/cover no-repeat;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      left: -5%;
+      bottom: -80px;
+      width: 110%;
+      height: 170px;
+      background: #f7fffc;
+      border-radius: 50% 50% 0 0;
+      z-index: 1;
+    }
+
+    .navbar {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 28px 0;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1;
+    }
+
+    .logo-icon {
+      width: 46px;
+      height: 46px;
+      background: #12c76a;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+    }
+
+    .logo-text strong {
+      display: block;
+      font-size: 22px;
+      letter-spacing: 1px;
+    }
+
+    .logo-text span {
+      display: block;
+      font-size: 11px;
+      color: #dfffee;
+      margin-top: 3px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .nav-links a {
       color: white;
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .nav-whats {
+      background: #16c95b;
+      padding: 14px 22px;
+      border-radius: 10px;
+      color: white;
+      font-weight: 900;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
       text-align: center;
-      padding: 60px 20px;
+      padding-top: 40px;
     }
 
     .hero h1 {
-      font-size: 32px;
-      margin-bottom: 15px;
-      line-height: 1.2;
+      font-size: 56px;
+      line-height: 1.08;
+      font-weight: 900;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 span {
+      color: #18d66f;
+      display: block;
     }
 
     .hero p {
-      font-size: 18px;
-      margin-bottom: 25px;
+      font-size: 26px;
+      line-height: 1.35;
+      max-width: 840px;
+      margin: 0 auto 35px;
+      color: #fff;
+    }
+
+    .benefits-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+      max-width: 820px;
+      margin: 0 auto 35px;
+    }
+
+    .benefit-mini {
+      text-align: center;
+      font-weight: 700;
+      font-size: 17px;
+    }
+
+    .benefit-mini .circle {
+      width: 78px;
+      height: 78px;
+      margin: 0 auto 10px;
+      border-radius: 50%;
+      background: #078b49;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
     }
 
     .btn {
-      display: inline-block;
-      background: #25d366;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #18d66f, #079c48);
       color: white;
-      padding: 15px 24px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 16px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-      margin-top: 15px;
+      padding: 18px 34px;
+      border-radius: 16px;
+      font-size: 20px;
+      font-weight: 900;
+      text-transform: uppercase;
+      box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+      border: none;
+      cursor: pointer;
     }
 
-    .btn-dark {
-      background: #007f5f;
-    }
-
-    h2 {
-      text-align: center;
-      font-size: 28px;
-      margin-bottom: 15px;
-      color: #007f5f;
-    }
-
-    .subtitle {
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto 30px;
-      color: #4b5563;
-    }
-
-    .cards, .steps {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-
-    .card, .step, .testimonial, .faq-item {
+    .btn-outline {
       background: white;
-      padding: 25px;
-      border-radius: 18px;
-      box-shadow: 0 5px 18px rgba(0,0,0,0.08);
-      text-align: center;
+      color: #047c44;
+      border: 3px solid #047c44;
+      box-shadow: none;
     }
 
-    .card h3, .step h3, .faq-item h3 {
-      color: #007f5f;
-      margin-bottom: 10px;
-    }
-
-    .cta-center {
-      text-align: center;
-      margin-top: 30px;
-    }
-
-    .slider {
+    .results-strip {
       position: relative;
-      max-width: 700px;
-      height: 420px;
-      margin: 30px auto;
+      z-index: 3;
+      margin-top: -35px;
+      padding: 0 0 50px;
+    }
+
+    .carousel-wrapper {
       overflow: hidden;
-      border-radius: 20px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-      background: #ddd;
+      width: 100%;
+      padding: 10px 0 25px;
     }
 
-    .slide {
-      position: absolute;
+    .carousel-track {
+      display: flex;
+      gap: 18px;
+      width: max-content;
+      animation: slideResults 24s linear infinite;
+    }
+
+    .result-card {
+      position: relative;
+      flex: 0 0 210px;
+      height: 340px;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.14);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .result-card img {
       width: 100%;
       height: 100%;
-      opacity: 0;
-      transition: opacity 0.8s ease-in-out;
+      object-fit: contain;
+      background: #fff;
     }
 
-    .slide.active {
-      opacity: 1;
-    }
-
-    .slide img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .badge {
+    .result-card .tag {
       position: absolute;
-      left: 15px;
-      bottom: 15px;
-      background: rgba(0,0,0,0.65);
+      left: 10px;
+      bottom: 10px;
+      background: #047c44;
       color: white;
-      padding: 8px 14px;
-      border-radius: 20px;
-      font-size: 14px;
-      font-weight: bold;
+      padding: 7px 13px;
+      border-radius: 10px;
+      font-size: 17px;
+      font-weight: 900;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
     }
 
-    .step span {
-      display: inline-block;
-      background: #007f5f;
-      color: white;
-      width: 35px;
-      height: 35px;
-      border-radius: 50%;
-      line-height: 35px;
-      font-weight: bold;
+    @keyframes slideResults {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    .section {
+      padding: 70px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 42px;
+      color: #057944;
       margin-bottom: 10px;
+      font-weight: 900;
     }
 
-    .testimonial {
-      text-align: left;
-      margin-bottom: 15px;
-    }
-
-    .faq-item {
-      text-align: left;
-      margin-bottom: 15px;
-    }
-
-    .final-cta {
-      background: linear-gradient(135deg, #007f5f, #00b894);
-      color: white;
+    .section-subtitle {
       text-align: center;
-      padding: 55px 20px;
+      font-size: 20px;
+      color: #34534a;
+      margin-bottom: 42px;
     }
 
-    .final-cta h2 {
-      color: white;
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 26px;
+      margin-bottom: 35px;
     }
 
-    footer {
-      background: #111827;
-      color: white;
+    .service-card {
+      background: white;
+      border-radius: 22px;
+      padding: 34px 20px;
       text-align: center;
-      padding: 25px 15px;
-      font-size: 14px;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.08);
     }
 
-    .floating-whatsapp {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      background: #25d366;
+    .service-icon {
+      width: 86px;
+      height: 86px;
+      margin: 0 auto 18px;
+      border-radius: 50%;
+      background: #dff9ec;
+      border: 2px solid #a7e8c7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 38px;
+    }
+
+    .service-card h3 {
+      color: #064b35;
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      color: #34534a;
+      font-size: 16px;
+      line-height: 1.45;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .how {
+      background: linear-gradient(135deg, #013b27, #03663d);
       color: white;
-      padding: 14px 18px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-      z-index: 999;
+      padding: 65px 0;
     }
 
-    @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 27px;
+    .how .section-title {
+      color: white;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+    }
+
+    .step {
+      position: relative;
+      padding: 10px;
+    }
+
+    .step-number {
+      color: #adffd4;
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+
+    .step-icon {
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      background: #18b862;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 34px;
+      margin-bottom: 14px;
+    }
+
+    .step h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      font-size: 15px;
+      color: #e8fff2;
+      line-height: 1.45;
+    }
+        .floating-whatsapp{
+      position:fixed;
+      right:20px;
+      bottom:20px;
+      background:#18d66f;
+      color:#fff;
+      padding:16px 22px;
+      border-radius:50px;
+      font-weight:900;
+      z-index:999;
+      box-shadow:0 8px 20px rgba(0,0,0,.25);
+    }
+
+    @media(max-width:900px){
+
+      .navbar{
+        flex-direction:column;
+        gap:20px;
       }
 
-      .hero p {
-        font-size: 16px;
+      .nav-links{
+        display:none;
       }
 
-      .slider {
-        height: 300px;
+      .hero{
+        min-height:auto;
+        padding-bottom:100px;
       }
 
-      section {
-        padding: 35px 16px;
+      .hero h1{
+        font-size:40px;
       }
 
-      .floating-whatsapp {
-        right: 12px;
-        bottom: 12px;
-        font-size: 14px;
-        padding: 12px 15px;
+      .hero p{
+        font-size:20px;
+      }
+
+      .benefits-row,
+      .services-grid,
+      .steps{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .result-card{
+        flex:0 0 170px;
+        height:280px;
       }
     }
+
+    @media(max-width:600px){
+
+      .hero h1{
+        font-size:32px;
+      }
+
+      .hero p{
+        font-size:18px;
+      }
+
+      .benefits-row,
+      .services-grid,
+      .steps{
+        grid-template-columns:1fr;
+      }
+
+      .btn{
+        width:100%;
+        font-size:17px;
+        padding:16px 20px;
+      }
+
+      .result-card{
+        flex:0 0 140px;
+        height:240px;
+      }
+
+      .section-title{
+        font-size:32px;
+      }
+
+      .section-subtitle{
+        font-size:17px;
+      }
+    }
+
   </style>
 </head>
 
 <body>
 
 <header class="hero">
+
   <div class="container">
-    <h1>Limpeza Profissional de Sofás, Colchões, Cadeiras e Poltronas</h1>
-    <p>Devolva a aparência de novo aos seus estofados com higienização profunda, prática e segura.</p>
 
-    <a class="btn"
-       href="https://wa.me/5569992315490?text=Olá,%20quero%20fazer%20um%20orçamento%20de%20limpeza%20de%20estofados."
-       target="_blank"
-       onclick="fbq('track', 'Contact', {button:'hero'});">
-      QUERO MEU ORÇAMENTO AGORA
-    </a>
-  </div>
-</header>
+    <nav class="navbar">
 
-<section>
-  <div class="container">
-    <h2>Por que escolher a Rondônia Clean?</h2>
-    <p class="subtitle">Atendimento profissional em Porto Velho, Nova Mutum Paraná e Jaci-Paraná.</p>
+      <div class="logo">
+        <div class="logo-icon">🛋️</div>
 
-    <div class="cards">
-      <div class="card">
-        <h3>Higienização Profunda</h3>
-        <p>Remove sujeiras, odores, ácaros e impurezas acumuladas no tecido.</p>
+        <div class="logo-text">
+          <strong>RONDÔNIA CLEAN</strong>
+          <span>LIMPEZA DE ESTOFADOS</span>
+        </div>
       </div>
 
-      <div class="card">
-        <h3>Mais Saúde</h3>
-        <p>Ideal para famílias com crianças, pets e pessoas alérgicas.</p>
+      <div class="nav-links">
+        <a href="#inicio">INÍCIO</a>
+        <a href="#servicos">SERVIÇOS</a>
+        <a href="#como-funciona">COMO FUNCIONA</a>
       </div>
 
-      <div class="card">
-        <h3>Atendimento em Casa</h3>
-        <p>Você não precisa transportar nada. Vamos até você.</p>
-      </div>
-
-      <div class="card">
-        <h3>Resultado Visível</h3>
-        <p>Estofados com aparência renovada e sensação de limpeza real.</p>
-      </div>
-    </div>
-
-    <div class="cta-center">
-      <a class="btn btn-dark"
-         href="https://wa.me/5569992315490?text=Olá,%20quero%20saber%20mais%20sobre%20a%20limpeza%20de%20estofados."
+      <a class="nav-whats"
+         href="https://wa.me/5569992315490"
          target="_blank"
-         onclick="fbq('track', 'Contact', {button:'beneficios'});">
-        CHAMAR NO WHATSAPP
+         onclick="fbq('track','Contact',{button:'menu'});">
+         CHAMAR NO WHATSAPP
       </a>
-    </div>
-  </div>
-</section>
 
-<section style="background:#e8f7f2;">
-  <div class="container">
-    <h2>Resultados Reais</h2>
-    <p class="subtitle">Veja alguns exemplos misturados dos serviços: sofá, cadeira, colchão e poltrona.</p>
+    </nav>
 
-    <div class="slider">
-      <div class="slide active">
-        <img src="sofa1.jpg" alt="Limpeza de sofá">
-        <div class="badge">Sofá</div>
+    <div class="hero-content" id="inicio">
+
+      <h1>
+        Limpeza Profissional de
+        <span>Sofás, Colchões, Cadeiras e Poltronas</span>
+      </h1>
+
+      <p>
+        Devolva a aparência de novo aos seus estofados
+        com higienização profunda, prática e segura.
+      </p>
+
+      <div class="benefits-row">
+
+        <div class="benefit-mini">
+          <div class="circle">🛡️</div>
+          Higienização<br>Profunda
+        </div>
+
+        <div class="benefit-mini">
+          <div class="circle">🏠</div>
+          Atendimento<br>em Casa
+        </div>
+
+        <div class="benefit-mini">
+          <div class="circle">🌿</div>
+          Produtos<br>Profissionais
+        </div>
+
+        <div class="benefit-mini">
+          <div class="circle">✔️</div>
+          Resultado<br>Comprovado
+        </div>
+
       </div>
-
-      <div class="slide">
-        <img src="poltrona1.jpg" alt="Limpeza de cadeira">
-        <div class="badge">Cadeira</div>
-      </div>
-
-      <div class="slide">
-        <img src="colchao1.jpg" alt="Limpeza de colchão">
-        <div class="badge">Colchão</div>
-      </div>
-
-      <div class="slide">
-        <img src="sofa2.jpg" alt="Limpeza de sofá">
-        <div class="badge">Sofá</div>
-      </div>
-
-      <div class="slide">
-        <img src="poltrona2.jpg" alt="Limpeza de poltrona">
-        <div class="badge">Poltrona</div>
-      </div>
-
-      <div class="slide">
-        <img src="colchao2.jpg" alt="Limpeza de colchão">
-        <div class="badge">Colchão</div>
-      </div>
-
-      <div class="slide">
-        <img src="sofa3.jpg" alt="Limpeza de sofá">
-        <div class="badge">Sofá</div>
-      </div>
-
-      <div class="slide">
-        <img src="poltrona3.jpg" alt="Limpeza de cadeira">
-        <div class="badge">Cadeira</div>
-      </div>
-
-      <div class="slide">
-        <img src="colchao3.jpg" alt="Limpeza de colchão">
-        <div class="badge">Colchão</div>
-      </div>
-    </div>
-
-    <div class="cta-center">
-      <p>Gostou dos resultados? Seu estofado também pode ficar assim.</p>
 
       <a class="btn"
-         href="https://wa.me/5569992315490?text=Olá,%20gostei%20dos%20resultados%20e%20quero%20agendar%20minha%20limpeza."
+         href="https://wa.me/5569992315490?text=Olá,%20quero%20um%20orçamento."
          target="_blank"
-         onclick="fbq('track', 'Contact', {button:'resultados'});">
-        QUERO AGENDAR MINHA LIMPEZA
+         onclick="fbq('track','Contact',{button:'hero'});">
+
+        💬 QUERO MEU ORÇAMENTO AGORA
+
       </a>
+
     </div>
+
   </div>
+
+</header>
+
+<section class="results-strip">
+
+  <div class="container">
+
+    <div class="carousel-wrapper">
+
+      <div class="carousel-track">
+
+        <div class="result-card">
+          <img src="sofa1.jpg">
+          <span class="tag">Sofá</span>
+        </div>
+
+        <div class="result-card">
+          <img src="poltrona1.jpg">
+          <span class="tag">Cadeira</span>
+        </div>
+
+        <div class="result-card">
+          <img src="colchao1.jpg">
+          <span class="tag">Colchão</span>
+        </div>
+
+        <div class="result-card">
+          <img src="poltrona2.jpg">
+          <span class="tag">Poltrona</span>
+        </div>
+
+        <div class="result-card">
+          <img src="sofa2.jpg">
+          <span class="tag">Sofá</span>
+        </div>
+
+        <!-- repetição para efeito infinito -->
+
+        <div class="result-card">
+          <img src="sofa1.jpg">
+          <span class="tag">Sofá</span>
+        </div>
+
+        <div class="result-card">
+          <img src="poltrona1.jpg">
+          <span class="tag">Cadeira</span>
+        </div>
+
+        <div class="result-card">
+          <img src="colchao1.jpg">
+          <span class="tag">Colchão</span>
+        </div>
+
+        <div class="result-card">
+          <img src="poltrona2.jpg">
+          <span class="tag">Poltrona</span>
+        </div>
+
+        <div class="result-card">
+          <img src="sofa2.jpg">
+          <span class="tag">Sofá</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
 
-<section>
-  <div class="container">
-    <h2>Serviços que realizamos</h2>
-    <p class="subtitle">Limpeza profissional para os principais estofados da sua casa.</p>
+<section class="section" id="servicos">
 
-    <div class="cards">
-      <div class="card">
+  <div class="container">
+
+    <h2 class="section-title">
+      Serviços que realizamos
+    </h2>
+
+    <p class="section-subtitle">
+      Limpeza profissional para os principais estofados da sua casa.
+    </p>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon">🛋️</div>
         <h3>Sofás</h3>
-        <p>Limpeza completa para sofá de 2, 3 lugares, retrátil, reclinável e de canto.</p>
+        <p>Limpeza completa para sofá de 2, 3 lugares, retrátil e de canto.</p>
       </div>
 
-      <div class="card">
+      <div class="service-card">
+        <div class="service-icon">🛏️</div>
         <h3>Colchões</h3>
-        <p>Higienização para colchões de solteiro, casal, queen e king.</p>
+        <p>Higienização para colchões solteiro, casal, queen e king.</p>
       </div>
 
-      <div class="card">
+      <div class="service-card">
+        <div class="service-icon">🪑</div>
         <h3>Cadeiras</h3>
-        <p>Limpeza de cadeiras de jantar, escritório e cadeiras estofadas.</p>
+        <p>Limpeza de cadeiras de jantar e escritório.</p>
       </div>
 
-      <div class="card">
+      <div class="service-card">
+        <div class="service-icon">💺</div>
         <h3>Poltronas</h3>
-        <p>Limpeza de poltronas decorativas, reclináveis e de amamentação.</p>
+        <p>Limpeza de poltronas decorativas e reclináveis.</p>
       </div>
+
     </div>
 
-    <div class="cta-center">
-      <a class="btn btn-dark"
-         href="https://wa.me/5569992315490?text=Olá,%20quero%20um%20orçamento%20para%20limpeza%20de%20sofá,%20colchão%20ou%20cadeira."
+    <div class="center">
+
+      <a class="btn btn-outline"
+         href="https://wa.me/5569992315490"
          target="_blank"
-         onclick="fbq('track', 'Contact', {button:'servicos'});">
-        SOLICITAR ORÇAMENTO
+         onclick="fbq('track','Contact',{button:'servicos'});">
+
+         💬 SOLICITAR ORÇAMENTO
+
       </a>
+
     </div>
+
   </div>
+
 </section>
 
-<section style="background:#e8f7f2;">
+<section class="how" id="como-funciona">
+
   <div class="container">
-    <h2>Como funciona?</h2>
+
+    <h2 class="section-title">
+      Como funciona?
+    </h2>
 
     <div class="steps">
+
       <div class="step">
-        <span>1</span>
-        <h3>Você chama no WhatsApp</h3>
+        <div class="step-number">1</div>
+        <div class="step-icon">💬</div>
+        <h3>Você chama</h3>
         <p>Envie uma mensagem informando qual estofado deseja limpar.</p>
       </div>
 
       <div class="step">
-        <span>2</span>
-        <h3>Fazemos o orçamento</h3>
+        <div class="step-number">2</div>
+        <div class="step-icon">📋</div>
+        <h3>Orçamento</h3>
         <p>Você recebe o valor e as informações do serviço.</p>
       </div>
 
       <div class="step">
-        <span>3</span>
-        <h3>Agendamos o atendimento</h3>
+        <div class="step-number">3</div>
+        <div class="step-icon">📅</div>
+        <h3>Agendamento</h3>
         <p>Escolhemos o melhor dia e horário para você.</p>
       </div>
 
       <div class="step">
-        <span>4</span>
-        <h3>Realizamos a limpeza</h3>
+        <div class="step-number">4</div>
+        <div class="step-icon">✨</div>
+        <h3>Limpeza</h3>
         <p>Em média, o serviço leva entre 2 e 5 horas.</p>
       </div>
+
     </div>
 
-    <div class="cta-center">
-      <a class="btn"
-         href="https://wa.me/5569992315490?text=Olá,%20quero%20agendar%20uma%20limpeza%20de%20estofados."
-         target="_blank"
-         onclick="fbq('track', 'Contact', {button:'como_funciona'});">
-        AGENDAR AGORA
-      </a>
-    </div>
   </div>
+
 </section>
-
-<section>
-  <div class="container">
-    <h2>O que nossos clientes dizem</h2>
-
-    <div class="testimonial">
-      <p>“Meu sofá ficou com aparência de novo. Atendimento rápido e muito caprichado.”</p>
-      <strong>Cliente Rondônia Clean</strong>
-    </div>
-
-    <div class="testimonial">
-      <p>“Gostei muito do resultado. Tirou o cheiro ruim e deixou tudo bem limpo.”</p>
-      <strong>Cliente Rondônia Clean</strong>
-    </div>
-
-    <div class="testimonial">
-      <p>“Atendimento profissional, chegou no horário e explicou todo o processo.”</p>
-      <strong>Cliente Rondônia Clean</strong>
-    </div>
-
-    <div class="cta-center">
-      <a class="btn btn-dark"
-         href="https://wa.me/5569992315490?text=Olá,%20vi%20os%20depoimentos%20e%20quero%20fazer%20um%20orçamento."
-         target="_blank"
-         onclick="fbq('track', 'Contact', {button:'depoimentos'});">
-        FAZER ORÇAMENTO PELO WHATSAPP
-      </a>
-    </div>
-  </div>
-</section>
-
-<section style="background:#e8f7f2;">
-  <div class="container">
-    <h2>Perguntas Frequentes</h2>
-
-    <div class="faq-item">
-      <h3>Quanto tempo leva a limpeza?</h3>
-      <p>Em média, entre 2 e 5 horas, dependendo do tamanho e estado do estofado.</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>O atendimento é em domicílio?</h3>
-      <p>Sim. A Rondônia Clean vai até sua casa para realizar o serviço.</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>Atende quais locais?</h3>
-      <p>Atendemos Porto Velho, Nova Mutum Paraná e Jaci-Paraná.</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>Limpa sofá, colchão e cadeira?</h3>
-      <p>Sim. Trabalhamos com sofás, colchões, cadeiras e poltronas.</p>
-    </div>
-
-    <div class="cta-center">
-      <a class="btn"
-         href="https://wa.me/5569992315490?text=Olá,%20tenho%20uma%20dúvida%20sobre%20a%20limpeza%20de%20estofados."
-         target="_blank"
-         onclick="fbq('track', 'Contact', {button:'faq'});">
-        TIRAR DÚVIDAS NO WHATSAPP
-      </a>
-    </div>
-  </div>
-</section>
-
-<section class="final-cta">
-  <div class="container">
-    <h2>Seu sofá, colchão ou cadeira merece cuidado profissional</h2>
-    <p>Não espere a sujeira piorar. Solicite agora seu orçamento com a Rondônia Clean.</p>
-
-    <a class="btn"
-       href="https://wa.me/5569992315490?text=Olá,%20quero%20meu%20orçamento%20agora%20com%20a%20Rondônia%20Clean."
-       target="_blank"
-       onclick="fbq('track', 'Contact', {button:'final'});">
-      QUERO MEU ORÇAMENTO AGORA
-    </a>
-  </div>
-</section>
-
-<footer>
-  <p>Rondônia Clean - Limpeza de Estofados</p>
-  <p>Atendimento em Porto Velho, Nova Mutum Paraná e Jaci-Paraná</p>
-  <p>WhatsApp: (69) 99231-5490</p>
-</footer>
 
 <a class="floating-whatsapp"
-   href="https://wa.me/5569992315490?text=Olá,%20quero%20um%20orçamento%20de%20limpeza%20de%20estofados."
+   href="https://wa.me/5569992315490"
    target="_blank"
-   onclick="fbq('track', 'Contact', {button:'flutuante'});">
-  WhatsApp
+   onclick="fbq('track','Contact',{button:'flutuante'});">
+
+   WhatsApp
+
 </a>
-
-<script>
-  const slides = document.querySelectorAll('.slide');
-  let currentSlide = 0;
-
-  setInterval(() => {
-    slides[currentSlide].classList.remove('active');
-    currentSlide = (currentSlide + 1) % slides.length;
-    slides[currentSlide].classList.add('active');
-  }, 3000);
-</script>
 
 </body>
 </html>
