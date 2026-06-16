@@ -10,18 +10,11 @@
   !function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
   n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;
-  n.push=n;
-  n.loaded=!0;
-  n.version='2.0';
-  n.queue=[];
-  t=b.createElement(e);
-  t.async=!0;
-  t.src=v;
-  s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)
-  }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
   fbq('init', '981317201357491');
   fbq('track', 'PageView');
   </script>
@@ -30,7 +23,6 @@
     <img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=981317201357491&ev=PageView&noscript=1">
   </noscript>
-  <!-- End Meta Pixel Code -->
 
   <style>
     * {
@@ -42,6 +34,7 @@
 
     html {
       scroll-behavior: smooth;
+      overflow-x: hidden;
     }
 
     body {
@@ -62,12 +55,12 @@
 
     .hero {
       position: relative;
-      min-height: 680px;
       color: #fff;
       background:
         linear-gradient(rgba(0, 45, 30, 0.82), rgba(0, 45, 30, 0.82)),
         url("hero-sofa.jpg") center/cover no-repeat;
       overflow: hidden;
+      padding-bottom: 120px;
     }
 
     .hero::after {
@@ -76,7 +69,7 @@
       left: -5%;
       bottom: -80px;
       width: 110%;
-      height: 170px;
+      height: 160px;
       background: #f7fffc;
       border-radius: 50% 50% 0 0;
       z-index: 1;
@@ -86,8 +79,8 @@
       position: relative;
       z-index: 2;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       padding: 28px 0;
     }
 
@@ -95,15 +88,14 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      font-weight: 900;
       color: #fff;
-      line-height: 1;
+      font-weight: 900;
     }
 
     .logo-icon {
-      width: 46px;
-      height: 46px;
-      background: #12c76a;
+      width: 48px;
+      height: 48px;
+      background: #18d66f;
       border-radius: 14px;
       display: flex;
       align-items: center;
@@ -113,35 +105,32 @@
 
     .logo-text strong {
       display: block;
-      font-size: 22px;
-      letter-spacing: 1px;
+      font-size: 24px;
+      line-height: 1;
     }
 
     .logo-text span {
       display: block;
       font-size: 11px;
-      color: #dfffee;
-      margin-top: 3px;
+      margin-top: 4px;
     }
 
     .nav-links {
       display: flex;
-      align-items: center;
-      gap: 30px;
+      gap: 28px;
     }
 
     .nav-links a {
       color: white;
       font-size: 13px;
       font-weight: 800;
-      text-transform: uppercase;
     }
 
     .nav-whats {
-      background: #16c95b;
-      padding: 14px 22px;
-      border-radius: 10px;
+      background: #18d66f;
       color: white;
+      padding: 14px 22px;
+      border-radius: 12px;
       font-weight: 900;
       box-shadow: 0 8px 20px rgba(0,0,0,0.25);
     }
@@ -150,7 +139,7 @@
       position: relative;
       z-index: 2;
       text-align: center;
-      padding-top: 40px;
+      padding-top: 45px;
     }
 
     .hero h1 {
@@ -166,33 +155,32 @@
     }
 
     .hero p {
+      max-width: 820px;
+      margin: 0 auto 35px;
       font-size: 26px;
       line-height: 1.35;
-      max-width: 840px;
-      margin: 0 auto 35px;
-      color: #fff;
     }
 
     .benefits-row {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 25px;
-      max-width: 820px;
+      gap: 24px;
+      max-width: 850px;
       margin: 0 auto 35px;
     }
 
     .benefit-mini {
       text-align: center;
-      font-weight: 700;
       font-size: 17px;
+      font-weight: 800;
     }
 
-    .benefit-mini .circle {
+    .circle {
       width: 78px;
       height: 78px;
-      margin: 0 auto 10px;
-      border-radius: 50%;
       background: #078b49;
+      border-radius: 50%;
+      margin: 0 auto 10px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -213,8 +201,6 @@
       font-weight: 900;
       text-transform: uppercase;
       box-shadow: 0 12px 25px rgba(0,0,0,0.25);
-      border: none;
-      cursor: pointer;
     }
 
     .btn-outline {
@@ -227,50 +213,59 @@
     .results-strip {
       position: relative;
       z-index: 3;
-      margin-top: -35px;
-      padding: 0 0 50px;
+      margin-top: -50px;
+      padding-bottom: 60px;
     }
 
     .carousel-wrapper {
-      overflow: hidden;
       width: 100%;
-      padding: 10px 0 25px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding: 20px 0;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .carousel-wrapper::-webkit-scrollbar {
+      display: none;
     }
 
     .carousel-track {
       display: flex;
       gap: 18px;
       width: max-content;
-      animation: slideResults 24s linear infinite;
+      padding: 0 15px;
+      animation: slideResults 26s linear infinite;
     }
 
     .result-card {
       position: relative;
       flex: 0 0 210px;
       height: 340px;
-      border-radius: 14px;
+      background: white;
+      border-radius: 18px;
       overflow: hidden;
-      background: #fff;
       box-shadow: 0 10px 28px rgba(0,0,0,0.14);
       display: flex;
       align-items: center;
       justify-content: center;
+      scroll-snap-align: center;
     }
 
     .result-card img {
       width: 100%;
       height: 100%;
       object-fit: contain;
-      background: #fff;
+      background: white;
     }
 
-    .result-card .tag {
+    .tag {
       position: absolute;
       left: 10px;
       bottom: 10px;
       background: #047c44;
       color: white;
-      padding: 7px 13px;
+      padding: 7px 14px;
       border-radius: 10px;
       font-size: 17px;
       font-weight: 900;
@@ -278,12 +273,8 @@
     }
 
     @keyframes slideResults {
-      from {
-        transform: translateX(0);
-      }
-      to {
-        transform: translateX(-50%);
-      }
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
     }
 
     .section {
@@ -365,17 +356,6 @@
       gap: 25px;
     }
 
-    .step {
-      position: relative;
-      padding: 10px;
-    }
-
-    .step-number {
-      color: #adffd4;
-      font-weight: 900;
-      margin-bottom: 8px;
-    }
-
     .step-icon {
       width: 76px;
       height: 76px;
@@ -398,105 +378,196 @@
       color: #e8fff2;
       line-height: 1.45;
     }
-        .floating-whatsapp{
-      position:fixed;
-      right:20px;
-      bottom:20px;
-      background:#18d66f;
-      color:#fff;
-      padding:16px 22px;
-      border-radius:50px;
-      font-weight:900;
-      z-index:999;
-      box-shadow:0 8px 20px rgba(0,0,0,.25);
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      background: #18d66f;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 50px;
+      font-weight: 900;
+      z-index: 999;
+      box-shadow: 0 8px 20px rgba(0,0,0,.25);
     }
 
-    @media(max-width:900px){
-
-      .navbar{
-        flex-direction:column;
-        gap:20px;
+    @media(max-width: 900px) {
+      .navbar {
+        flex-direction: column;
+        gap: 18px;
       }
 
-      .nav-links{
-        display:none;
-      }
-
-      .hero{
-        min-height:auto;
-        padding-bottom:100px;
-      }
-
-      .hero h1{
-        font-size:40px;
-      }
-
-      .hero p{
-        font-size:20px;
+      .nav-links {
+        display: none;
       }
 
       .benefits-row,
       .services-grid,
-      .steps{
-        grid-template-columns:1fr 1fr;
+      .steps {
+        grid-template-columns: 1fr 1fr;
       }
 
-      .result-card{
-        flex:0 0 170px;
-        height:280px;
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero p {
+        font-size: 22px;
       }
     }
 
-    @media(max-width:600px){
-
-      .hero h1{
-        font-size:32px;
+    @media(max-width: 600px) {
+      .container {
+        width: 94%;
       }
 
-      .hero p{
-        font-size:18px;
+      .hero {
+        padding-bottom: 85px;
       }
 
-      .benefits-row,
+      .navbar {
+        padding: 24px 0 10px;
+      }
+
+      .logo {
+        justify-content: center;
+      }
+
+      .logo-icon {
+        width: 58px;
+        height: 58px;
+        font-size: 30px;
+      }
+
+      .logo-text strong {
+        font-size: 28px;
+      }
+
+      .logo-text span {
+        font-size: 13px;
+      }
+
+      .nav-whats {
+        width: 100%;
+        text-align: center;
+        font-size: 18px;
+        padding: 17px 20px;
+        border-radius: 14px;
+      }
+
+      .hero-content {
+        padding-top: 42px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+        line-height: 1.15;
+      }
+
+      .hero h1 span {
+        font-size: 40px;
+        line-height: 1.08;
+      }
+
+      .hero p {
+        font-size: 20px;
+        line-height: 1.45;
+        margin-bottom: 32px;
+      }
+
+      .benefits-row {
+        grid-template-columns: 1fr 1fr;
+        gap: 22px 14px;
+        margin-bottom: 32px;
+      }
+
+      .benefit-mini {
+        font-size: 15px;
+      }
+
+      .circle {
+        width: 70px;
+        height: 70px;
+        font-size: 30px;
+      }
+
+      .btn {
+        width: 100%;
+        font-size: 17px;
+        padding: 18px 16px;
+        border-radius: 16px;
+      }
+
+      .hero::after {
+        height: 90px;
+        bottom: -45px;
+      }
+
+      .results-strip {
+        margin-top: -20px;
+        padding-bottom: 50px;
+      }
+
+      .carousel-track {
+        animation: none;
+        gap: 14px;
+        padding: 0 12px;
+      }
+
+      .result-card {
+        flex: 0 0 78vw;
+        height: 360px;
+      }
+
+      .result-card img {
+        object-fit: contain;
+      }
+
+      .tag {
+        font-size: 18px;
+        left: 12px;
+        bottom: 12px;
+      }
+
+      .section {
+        padding: 55px 0;
+      }
+
+      .section-title {
+        font-size: 34px;
+        line-height: 1.15;
+      }
+
+      .section-subtitle {
+        font-size: 18px;
+        line-height: 1.45;
+      }
+
       .services-grid,
-      .steps{
-        grid-template-columns:1fr;
+      .steps {
+        grid-template-columns: 1fr;
+        gap: 20px;
       }
 
-      .btn{
-        width:100%;
-        font-size:17px;
-        padding:16px 20px;
-      }
-
-      .result-card{
-        flex:0 0 140px;
-        height:240px;
-      }
-
-      .section-title{
-        font-size:32px;
-      }
-
-      .section-subtitle{
-        font-size:17px;
+      .floating-whatsapp {
+        right: 14px;
+        bottom: 14px;
+        font-size: 15px;
+        padding: 13px 18px;
       }
     }
-
   </style>
 </head>
 
 <body>
 
 <header class="hero">
-
   <div class="container">
 
     <nav class="navbar">
-
       <div class="logo">
         <div class="logo-icon">🛋️</div>
-
         <div class="logo-text">
           <strong>RONDÔNIA CLEAN</strong>
           <span>LIMPEZA DE ESTOFADOS</span>
@@ -513,25 +584,21 @@
          href="https://wa.me/5569992315490"
          target="_blank"
          onclick="fbq('track','Contact',{button:'menu'});">
-         CHAMAR NO WHATSAPP
+        CHAMAR NO WHATSAPP
       </a>
-
     </nav>
 
     <div class="hero-content" id="inicio">
-
       <h1>
         Limpeza Profissional de
         <span>Sofás, Colchões, Cadeiras e Poltronas</span>
       </h1>
 
       <p>
-        Devolva a aparência de novo aos seus estofados
-        com higienização profunda, prática e segura.
+        Devolva a aparência de novo aos seus estofados com higienização profunda, prática e segura.
       </p>
 
       <div class="benefits-row">
-
         <div class="benefit-mini">
           <div class="circle">🛡️</div>
           Higienização<br>Profunda
@@ -551,106 +618,75 @@
           <div class="circle">✔️</div>
           Resultado<br>Comprovado
         </div>
-
       </div>
 
       <a class="btn"
-         href="https://wa.me/5569992315490?text=Olá,%20quero%20um%20orçamento."
+         href="https://wa.me/5569992315490?text=Olá,%20quero%20um%20orçamento%20de%20limpeza%20de%20estofados."
          target="_blank"
          onclick="fbq('track','Contact',{button:'hero'});">
-
         💬 QUERO MEU ORÇAMENTO AGORA
-
       </a>
-
     </div>
 
   </div>
-
 </header>
 
 <section class="results-strip">
-
   <div class="container">
-
     <div class="carousel-wrapper">
-
       <div class="carousel-track">
 
         <div class="result-card">
-          <img src="sofa1.jpg">
+          <img src="sofa1.jpg" alt="Limpeza de sofá">
           <span class="tag">Sofá</span>
         </div>
 
         <div class="result-card">
-          <img src="poltrona1.jpg">
+          <img src="poltrona1.jpg" alt="Limpeza de cadeira">
           <span class="tag">Cadeira</span>
         </div>
 
         <div class="result-card">
-          <img src="colchao1.jpg">
+          <img src="colchao1.jpg" alt="Limpeza de colchão">
           <span class="tag">Colchão</span>
         </div>
 
         <div class="result-card">
-          <img src="poltrona2.jpg">
+          <img src="poltrona2.jpg" alt="Limpeza de poltrona">
           <span class="tag">Poltrona</span>
         </div>
 
         <div class="result-card">
-          <img src="sofa2.jpg">
-          <span class="tag">Sofá</span>
-        </div>
-
-        <!-- repetição para efeito infinito -->
-
-        <div class="result-card">
-          <img src="sofa1.jpg">
+          <img src="sofa2.jpg" alt="Limpeza de sofá">
           <span class="tag">Sofá</span>
         </div>
 
         <div class="result-card">
-          <img src="poltrona1.jpg">
+          <img src="sofa3.jpg" alt="Limpeza de sofá">
+          <span class="tag">Sofá</span>
+        </div>
+
+        <div class="result-card">
+          <img src="colchao2.jpg" alt="Limpeza de colchão">
+          <span class="tag">Colchão</span>
+        </div>
+
+        <div class="result-card">
+          <img src="poltrona3.jpg" alt="Limpeza de cadeira">
           <span class="tag">Cadeira</span>
-        </div>
-
-        <div class="result-card">
-          <img src="colchao1.jpg">
-          <span class="tag">Colchão</span>
-        </div>
-
-        <div class="result-card">
-          <img src="poltrona2.jpg">
-          <span class="tag">Poltrona</span>
-        </div>
-
-        <div class="result-card">
-          <img src="sofa2.jpg">
-          <span class="tag">Sofá</span>
         </div>
 
       </div>
-
     </div>
-
   </div>
-
 </section>
 
 <section class="section" id="servicos">
-
   <div class="container">
-
-    <h2 class="section-title">
-      Serviços que realizamos
-    </h2>
-
-    <p class="section-subtitle">
-      Limpeza profissional para os principais estofados da sua casa.
-    </p>
+    <h2 class="section-title">Serviços que realizamos</h2>
+    <p class="section-subtitle">Limpeza profissional para os principais estofados da sua casa.</p>
 
     <div class="services-grid">
-
       <div class="service-card">
         <div class="service-icon">🛋️</div>
         <h3>Sofás</h3>
@@ -674,77 +710,56 @@
         <h3>Poltronas</h3>
         <p>Limpeza de poltronas decorativas e reclináveis.</p>
       </div>
-
     </div>
 
     <div class="center">
-
       <a class="btn btn-outline"
-         href="https://wa.me/5569992315490"
+         href="https://wa.me/5569992315490?text=Olá,%20quero%20solicitar%20um%20orçamento."
          target="_blank"
          onclick="fbq('track','Contact',{button:'servicos'});">
-
-         💬 SOLICITAR ORÇAMENTO
-
+        💬 SOLICITAR ORÇAMENTO
       </a>
-
     </div>
-
   </div>
-
 </section>
 
 <section class="how" id="como-funciona">
-
   <div class="container">
-
-    <h2 class="section-title">
-      Como funciona?
-    </h2>
+    <h2 class="section-title">Como funciona?</h2>
 
     <div class="steps">
-
       <div class="step">
-        <div class="step-number">1</div>
         <div class="step-icon">💬</div>
-        <h3>Você chama</h3>
+        <h3>Você chama no WhatsApp</h3>
         <p>Envie uma mensagem informando qual estofado deseja limpar.</p>
       </div>
 
       <div class="step">
-        <div class="step-number">2</div>
         <div class="step-icon">📋</div>
-        <h3>Orçamento</h3>
+        <h3>Fazemos o orçamento</h3>
         <p>Você recebe o valor e as informações do serviço.</p>
       </div>
 
       <div class="step">
-        <div class="step-number">3</div>
         <div class="step-icon">📅</div>
-        <h3>Agendamento</h3>
+        <h3>Agendamos</h3>
         <p>Escolhemos o melhor dia e horário para você.</p>
       </div>
 
       <div class="step">
-        <div class="step-number">4</div>
         <div class="step-icon">✨</div>
-        <h3>Limpeza</h3>
+        <h3>Realizamos a limpeza</h3>
         <p>Em média, o serviço leva entre 2 e 5 horas.</p>
       </div>
-
     </div>
-
   </div>
-
 </section>
 
 <a class="floating-whatsapp"
-   href="https://wa.me/5569992315490"
+   href="https://wa.me/5569992315490?text=Olá,%20quero%20um%20orçamento."
    target="_blank"
    onclick="fbq('track','Contact',{button:'flutuante'});">
-
-   WhatsApp
-
+  WhatsApp
 </a>
 
 </body>
