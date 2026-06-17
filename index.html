@@ -17,8 +17,10 @@
   t.src=v;s=b.getElementsByTagName(e)[0];
   s.parentNode.insertBefore(t,s)}(window, document,'script',
   'https://connect.facebook.net/en_US/fbevents.js');
+
   fbq('init', '981317201357491');
   fbq('track', 'PageView');
+  fbq('track', 'ViewContent');
   </script>
 
   <noscript>
@@ -435,7 +437,7 @@
   <a class="top-whats"
      href="https://wa.me/5569992315490?text=Olá,%20quero%20um%20orçamento%20de%20limpeza%20de%20estofados."
      target="_blank"
-     onclick="fbq('track','Contact',{button:'topo'});">
+     onclick="fbq('track','Contact',{button:'topo'}); fbq('track','Lead');">
     WhatsApp
   </a>
 </div>
@@ -460,7 +462,7 @@
   <a class="btn"
      href="https://wa.me/5569992315490?text=Olá,%20quero%20um%20orçamento%20de%20limpeza%20de%20estofados."
      target="_blank"
-     onclick="fbq('track','Contact',{button:'hero'});">
+     onclick="fbq('track','Contact',{button:'hero'}); fbq('track','Lead');">
     💬 Quero meu orçamento agora
   </a>
 </div>
@@ -493,7 +495,7 @@
 <a class="btn"
    href="https://wa.me/5569992315490?text=Olá,%20gostei%20dos%20resultados%20e%20quero%20agendar%20minha%20limpeza."
    target="_blank"
-   onclick="fbq('track','Contact',{button:'resultados'});">
+   onclick="fbq('track','Contact',{button:'resultados'}); fbq('track','Lead');">
   💬 Quero agendar minha limpeza
 </a>
 ```
@@ -537,7 +539,7 @@
   <a class="btn"
      href="https://wa.me/5569992315490?text=Olá,%20quero%20solicitar%20um%20orçamento."
      target="_blank"
-     onclick="fbq('track','Contact',{button:'servicos'});">
+     onclick="fbq('track','Contact',{button:'servicos'}); fbq('track','Lead');">
     💬 Solicitar orçamento
   </a>
 </div>
@@ -625,7 +627,7 @@
   <a class="btn"
      href="https://wa.me/5569992315490?text=Olá,%20quero%20limpar%20meus%20estofados."
      target="_blank"
-     onclick="fbq('track','Contact',{button:'beneficios'});">
+     onclick="fbq('track','Contact',{button:'beneficios'}); fbq('track','Lead');">
     💬 Quero limpar meus estofados
   </a>
 </div>
@@ -658,7 +660,7 @@
   <a class="btn"
      href="https://wa.me/5569992315490?text=Olá,%20vi%20os%20depoimentos%20e%20quero%20um%20orçamento."
      target="_blank"
-     onclick="fbq('track','Contact',{button:'depoimentos'});">
+     onclick="fbq('track','Contact',{button:'depoimentos'}); fbq('track','Lead');">
     💬 Fazer orçamento pelo WhatsApp
   </a>
 </div>
@@ -696,7 +698,7 @@
   <a class="btn"
      href="https://wa.me/5569992315490?text=Olá,%20tenho%20uma%20dúvida%20sobre%20a%20limpeza%20de%20estofados."
      target="_blank"
-     onclick="fbq('track','Contact',{button:'faq'});">
+     onclick="fbq('track','Contact',{button:'faq'}); fbq('track','Lead');">
     💬 Tirar dúvida no WhatsApp
   </a>
 </div>
@@ -714,7 +716,7 @@
 <a class="btn"
    href="https://wa.me/5569992315490?text=Olá,%20quero%20meu%20orçamento%20agora%20com%20a%20Rondônia%20Clean."
    target="_blank"
-   onclick="fbq('track','Contact',{button:'final'});">
+   onclick="fbq('track','Contact',{button:'final'}); fbq('track','Lead');">
   💬 Quero meu orçamento agora
 </a>
 ```
@@ -731,7 +733,7 @@
 <a class="floating-whatsapp"
 href="https://wa.me/5569992315490?text=Olá,%20quero%20um%20orçamento%20de%20limpeza%20de%20estofados."
 target="_blank"
-onclick="fbq('track','Contact',{button:'flutuante'});">
+onclick="fbq('track','Contact',{button:'flutuante'}); fbq('track','Lead');">
 💬 WhatsApp </a>
 
 <script>
